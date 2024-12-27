@@ -6,3 +6,9 @@ psycopg2-binary==2.9.9
 SQLAlchemy==2.0.21
 uuid==1.30 
 pytest
+scrapy
+requests
+scrapy-user-agents
+scrapy-proxy-pool
+scrapy-selenium
+selenium
