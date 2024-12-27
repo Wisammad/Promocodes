@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from models import PromoCode, db
+from datetime import datetime
 
 promo_bp = Blueprint('promo', __name__)
 
@@ -7,11 +8,18 @@ promo_bp = Blueprint('promo', __name__)
 def get_promo_codes():
     promos = PromoCode.query.all()
     return jsonify([{
-        'id': p.id,
+        'id': str(p.id),
         'code': p.code,
-        'discount_percentage': p.discount_percentage,
-        'valid_until': p.valid_until,
-        'is_active': p.is_active
+        'platform': p.platform,
+        'discount_type': p.discount_type,
+        'discount_value': float(p.discount_value),
+        'expiration_date': p.expiration_date.isoformat(),
+        'usage_limit': p.usage_limit,
+        'user_profile_restriction': p.user_profile_restriction,
+        'location_restriction': p.location_restriction,
+        'revenue_share': float(p.revenue_share),
+        'created_at': p.created_at.isoformat(),
+        'updated_at': p.updated_at.isoformat()
     } for p in promos])
 
 @promo_bp.route('/promo-codes', methods=['POST'])
