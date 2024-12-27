@@ -59,6 +59,30 @@ def delete_promo_code(id):
     db.session.commit()
     return jsonify({'message': 'Promo code deleted successfully'})
 
+@promo_bp.route('/promo-codes', methods=['POST'])
+def add_promo_code():
+    data = request.get_json()
+
+    # Validate required fields
+    required_fields = ['code', 'platform', 'discount_type', 'discount_value', 'expiration_date', 'usage_limit']
+    if not all(field in data for field in required_fields):
+        return jsonify({'error': 'Missing required fields'}), 400
+
+    # Check for duplicate promo code
+    if PromoCode.query.filter_by(code=data['code']).first():
+        return jsonify({'error': 'Promo code already exists'}), 400
+
+    # Validate discount_value is numeric
+    try:
+        data['discount_value'] = float(data['discount_value'])
+    except ValueError:
+        return jsonify({'error': 'Invalid discount value'}), 400
+
+    new_promo = PromoCode(**data)
+    db.session.add(new_promo)
+    db.session.commit()
+    return jsonify({'message': 'Promo code added successfully'}), 201
+
 @promo_bp.route('/apply-code', methods=['POST'])
 def apply_promo_code():
     data = request.get_json()
