@@ -8,7 +8,7 @@ class PromoCodesSpider(scrapy.Spider):
     name = "promo_codes"
     allowed_domains = ["retailmenot.com"]
     start_urls = [
-        "https://www.retailmenot.com/deals/christmas"
+        "https://www.retailmenot.com/deals/christmas/robots.txt"
     ]
 
     custom_settings = {
