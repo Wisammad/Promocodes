@@ -157,3 +157,117 @@ class StaticPromoScraper:
         # Reference the save_to_api implementation from pipelines.py
         # Reference lines 4-34 from pipelines.py
         pass
+
+    def fetch_category_urls(self):
+        try:
+            print("\n=== Starting Category URL Fetch ===")
+            url = f"{self.base_url}/categories/"
+            print(f"Accessing URL: {url}")
+            self.driver.get(url)
+            
+            print("\nWaiting for elements to load...")
+            try:
+                WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "ul.categories__list"))
+                )
+                print("✓ Elements loaded successfully")
+            except Exception as wait_error:
+                print(f"⚠️ Timeout waiting for elements: {str(wait_error)}")
+            
+            category_urls = set()
+            
+            print("\n=== Checking Category Links ===")
+            content_links = self.driver.find_elements(By.CSS_SELECTOR, "ul.categories__list a.categories__link")
+            print(f"Found {len(content_links)} category links")
+            
+            for link in content_links:
+                try:
+                    href = link.get_attribute("href")
+                    name_element = link.find_elements(By.CSS_SELECTOR, "span.categories__name")
+                    text = name_element[0].text.strip() if name_element else link.text.strip()
+                    
+                    if href and "coupons/categories" in href:
+                        category_urls.add(href)
+                except Exception as e:
+                    print(f"⚠️ Error processing category link: {str(e)}")
+            
+            # If no categories found, try alternative approach
+            if not category_urls:
+                print("\n=== Trying Alternative Approach ===")
+                print("Looking for any category-related links...")
+                
+                all_links = self.driver.find_elements(By.TAG_NAME, "a")
+                print(f"\nTotal links found on page: {len(all_links)}")
+                
+                for link in all_links:
+                    try:
+                        href = link.get_attribute("href")
+                        text = link.text.strip()
+                        if href and "coupons/categories" in href:
+                            category_urls.add(href)
+                    except Exception as e:
+                        continue
+            
+            # Final results
+            category_urls = list(category_urls)
+            print("\n=== FINAL RESULTS ===")
+            print(f"Total unique category URLs found: {len(category_urls)}")
+            for idx, url in enumerate(category_urls, 1):
+                print(f"Category {idx}: {url}")
+            
+            # Save debug info if no URLs found
+            if not category_urls:
+                print("\n⚠️ No category URLs found!")
+                print("Saving page source and screenshots...")
+                self.save_page_source("no_categories_found.html", self.driver.page_source)
+                self.driver.save_screenshot("debug_screenshot.png")
+                
+                # Log all links found on the page
+                print("\n=== All Links on Page ===")
+                all_links = self.driver.find_elements(By.TAG_NAME, "a")
+                for idx, link in enumerate(all_links, 1):
+                    try:
+                        print(f"\nLink {idx}:")
+                        print(f"- HTML: {link.get_attribute('outerHTML')}")
+                        print(f"- HREF: {link.get_attribute('href')}")
+                        print(f"- Text: {link.text.strip()}")
+                    except:
+                        continue
+            
+            return category_urls
+
+        except Exception as e:
+            print(f"❌ Critical error finding category URLs: {str(e)}")
+            self.save_page_source("critical_error.html", self.driver.page_source)
+            self.driver.save_screenshot("error_screenshot.png")
+            return []
+
+    def fetch_all_coupons(self):
+        all_coupons = []
+        
+        # First get all category URLs
+        category_urls = self.fetch_category_urls()
+        
+        # Process each category
+        for idx, category_url in enumerate(category_urls, 1):
+            print(f"\nProcessing category {idx}/{len(category_urls)}")
+            print(f"URL: {category_url}")
+            
+            # Temporarily update base_url for this category
+            original_base_url = self.base_url
+            self.base_url = category_url
+            
+            # Use existing fetch_coupons logic
+            category_coupons = self.fetch_coupons()
+            all_coupons.extend(category_coupons)
+            
+            # Restore original base_url
+            self.base_url = original_base_url
+        
+        # Print final summary
+        print("\n=== FINAL RESULTS ===")
+        print(f"Total categories processed: {len(category_urls)}")
+        print(f"Total coupons found: {len(all_coupons)}")
+        print("===================\n")
+        
+        return all_coupons

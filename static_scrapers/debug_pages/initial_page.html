@@ -1,0 +1,2348 @@
+<html class="js supports flexbox borderimage" lang="en-US"><head>
+
+  
+
+  <script src="https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/dnsfeed" async="" type="text/javascript"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-PVBXQMCR&amp;l=dataLayer&amp;gtm=45He4cc1v78619095za200"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-E513DF63RS&amp;l=eventLayer&amp;cx=c&amp;gtm=45He4cc1v811026121za200"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5HBJC2K"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-N5V5TJ3&amp;l=eventLayer"></script><script type="text/javascript">!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,l;for(var a in S)if(S.hasOwnProperty(a)){if(e=[],n=S[a],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],l=i.split("."),1===l.length?Modernizr[l[0]]=o:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=o),C.push((o?"":"no-")+l.join("-"))}}function s(e){var n=b.className,t=Modernizr._config.classPrefix||"";if(P&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),P?b.className.baseVal=n:b.className=n)}function i(e,n){return!!~(""+e).indexOf(n)}function l(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):P?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function a(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(e,n){return function(){return e.apply(n,arguments)}}function f(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?u(o,t||n):o);return!1}function p(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var s=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(s){var i=s.error?"error":"log";s[i].call(s,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function c(){var e=n.body;return e||(e=l(P?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var s,i,a,u,f="modernizr",p=l("div"),d=c();if(parseInt(r,10))for(;r--;)a=l("div"),a.id=o?o[r]:f+(r+1),p.appendChild(a);return s=l("style"),s.type="text/css",s.id="s"+f,(d.fake?d:p).appendChild(s),d.appendChild(p),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),p.id=f,d.fake&&(d.style.background="",d.style.overflow="hidden",u=b.style.overflow,b.style.overflow="hidden",b.appendChild(d)),i=t(p,e),d.fake?(d.parentNode.removeChild(d),b.style.overflow=u,b.offsetHeight):p.parentNode.removeChild(p),!!i}function y(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(p(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+p(n[o])+":"+r+")");return s=s.join(" or "),m("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==d(e,null,"position")})}return t}function g(e,n,o,s){function u(){p&&(delete j.style,delete j.modElem)}if(s=r(s,"undefined")?!1:s,!r(o,"undefined")){var f=y(e,o);if(!r(f,"undefined"))return f}for(var p,d,c,m,g,v=["modernizr","tspan","samp"];!j.style&&v.length;)p=!0,j.modElem=l(v.shift()),j.style=j.modElem.style;for(c=e.length,d=0;c>d;d++)if(m=e[d],g=j.style[m],i(m,"-")&&(m=a(m)),j.style[m]!==t){if(s||r(o,"undefined"))return u(),"pfx"==n?m:!0;try{j.style[m]=o}catch(h){}if(j.style[m]!=g)return u(),"pfx"==n?m:!0}return u(),!1}function v(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),l=(e+" "+E.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?g(l,n,o,s):(l=(e+" "+T.join(i+" ")+i).split(" "),f(l,n,t))}function h(e,n,r){return v(e,t,t,n,r)}var C=[],S=[],w={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){S.push({name:e,fn:n,options:t})},addAsyncTest:function(e){S.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=w,Modernizr=new Modernizr;var x="CSS"in e&&"supports"in e.CSS,_="supportsCSS"in e;Modernizr.addTest("supports",x||_);var b=n.documentElement,P="svg"===b.nodeName.toLowerCase(),z="Moz O ms Webkit",E=w._config.usePrefixes?z.split(" "):[];w._cssomPrefixes=E;var T=w._config.usePrefixes?z.toLowerCase().split(" "):[];w._domPrefixes=T;var N={elem:l("modernizr")};Modernizr._q.push(function(){delete N.elem});var j={style:N.elem.style};Modernizr._q.unshift(function(){delete j.style}),w.testAllProps=v,w.testAllProps=h,Modernizr.addTest("flexbox",h("flexBasis","1px",!0)),Modernizr.addTest("borderimage",h("borderImage","url() 1",!0)),o(),s(C),delete w.addTest,delete w.addAsyncTest;for(var k=0;k<Modernizr._q.length;k++)Modernizr._q[k]();e.Modernizr=Modernizr}(window,document);</script>
+
+
+    <script>eventLayer = [{'site_id': '83'}];</script>
+
+  
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','eventLayer', 'GTM-N5V5TJ3');</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', 'GTM-5HBJC2K');</script>
+
+
+  
+
+  <link rel="preload" href="https://www.wired.com/coupons/static/fonts/83/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+<style>
+  /**/
+  svg {
+    font-family: serif !important;
+  }
+  
+  body a {
+    transition: none;
+  }
+  
+  body a:hover {
+    transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+    transition-property: color, background, text-shadow;
+  }
+  
+  body .coupon__description {
+    display: none;
+  }
+  
+  body div.coupon__description--full {
+    display: inline-block;
+  }
+  
+  @media (max-width: 767px) {
+  	.coupon * {
+      transition: none !important;
+    }
+    
+    body .m-navigation__list {
+      height: auto;
+    }
+  }
+</style>
+<script>
+window.newTracking = true</script>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Coupons by category</title>
+
+
+  <script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "url": "https://www.wired.com/coupons"
+    },
+    {
+      "@type": "WebPage",
+      "url": "https://www.wired.com/coupons/categories",
+      "description": "Find top coupons and discounts on various shops within the Department Stores, Hobby & Lifestyle, Home & Garden, Sports & Outdoors, and Tech & Electronics categories. ",
+      "name": "Coupons by category",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.wired.com/coupons/static/image_setting/132/logo/wired_coupons_logo.png",
+        "contentUrl": "https://www.wired.com/coupons/static/image_setting/132/logo/wired_coupons_logo.png"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ItemPage",
+            "name": "Department Stores",
+            "url": "/coupons/categories/department-stores"
+          },
+          {
+            "@type": "ItemPage",
+            "name": "Hobby & Lifestyle",
+            "url": "/coupons/categories/hobby-lifestyle"
+          },
+          {
+            "@type": "ItemPage",
+            "name": "Home & Garden",
+            "url": "/coupons/categories/home-garden"
+          },
+          {
+            "@type": "ItemPage",
+            "name": "Internet & Streaming",
+            "url": "/coupons/categories/internet-streaming"
+          },
+          {
+            "@type": "ItemPage",
+            "name": "Sports & Outdoors",
+            "url": "/coupons/categories/sports-outdoor"
+          },
+          {
+            "@type": "ItemPage",
+            "name": "Tech & Electronics",
+            "url": "/coupons/categories/tech-electronics"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.wired.com",
+            "name": "Wired.com"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.wired.com/coupons",
+            "name": "WIRED coupons"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.wired.com/coupons/categories",
+            "name": "Categories"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Top shops",
+      "url": "https://www.wired.com/coupons/stores"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "adidas",
+      "url": "https://www.wired.com/coupons/adidas"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "AliExpress",
+      "url": "https://www.wired.com/coupons/aliexpress"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Best Buy",
+      "url": "https://www.wired.com/coupons/best-buy"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Booking.com",
+      "url": "https://www.wired.com/coupons/booking-com"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Chewy",
+      "url": "https://www.wired.com/coupons/chewy"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Dell",
+      "url": "https://www.wired.com/coupons/dell"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "DoorDash",
+      "url": "https://www.wired.com/coupons/doordash"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "DSW",
+      "url": "https://www.wired.com/coupons/dsw"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Dyson",
+      "url": "https://www.wired.com/coupons/dyson"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Expedia",
+      "url": "https://www.wired.com/coupons/expedia"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "GameStop",
+      "url": "https://www.wired.com/coupons/gamestop"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "GoPro",
+      "url": "https://www.wired.com/coupons/gopro"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Groupon",
+      "url": "https://www.wired.com/coupons/groupon"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "H&R Block Tax",
+      "url": "https://www.wired.com/coupons/hr-block"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Home Chef",
+      "url": "https://www.wired.com/coupons/home-chef"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Instacart",
+      "url": "https://www.wired.com/coupons/instacart"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Lowe's",
+      "url": "https://www.wired.com/coupons/lowes"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Macy's",
+      "url": "https://www.wired.com/coupons/macys"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Meta Quest",
+      "url": "https://www.wired.com/coupons/meta-quest"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Nike",
+      "url": "https://www.wired.com/coupons/nike"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "NordVPN",
+      "url": "https://www.wired.com/coupons/nordvpn"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Office Depot & OfficeMax",
+      "url": "https://www.wired.com/coupons/office-depot-officemax"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Overstock",
+      "url": "https://www.wired.com/coupons/overstock"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Peacock TV",
+      "url": "https://www.wired.com/coupons/peacock-tv"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Philo",
+      "url": "https://www.wired.com/coupons/philo"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Priceline",
+      "url": "https://www.wired.com/coupons/priceline"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Samsung",
+      "url": "https://www.wired.com/coupons/samsung"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "SHEIN",
+      "url": "https://www.wired.com/coupons/shein"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "The Motley Fool",
+      "url": "https://www.wired.com/coupons/motley-fool"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "TurboTax",
+      "url": "https://www.wired.com/coupons/turbotax"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Walmart",
+      "url": "https://www.wired.com/coupons/walmart"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Wayfair",
+      "url": "https://www.wired.com/coupons/wayfair"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Explore all shops",
+      "url": "https://www.wired.com/coupons/stores"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Top coupons",
+      "url": "https://www.wired.com/coupons/best-coupons-and-deals"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Top categories",
+      "url": "https://www.wired.com/coupons/categories"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Department Stores",
+      "url": "https://www.wired.com/coupons/categories/department-stores"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Tech & Electronics",
+      "url": "https://www.wired.com/coupons/categories/tech-electronics"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Hobby & Lifestyle",
+      "url": "https://www.wired.com/coupons/categories/hobby-lifestyle"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Home & Garden",
+      "url": "https://www.wired.com/coupons/categories/home-garden"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Sports & Outdoors",
+      "url": "https://www.wired.com/coupons/categories/sports-outdoor"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Internet & Streaming",
+      "url": "https://www.wired.com/coupons/categories/internet-streaming"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Walmart",
+      "url": "https://www.wired.com/coupons/walmart"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Samsung",
+      "url": "https://www.wired.com/coupons/samsung"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "DoorDash",
+      "url": "https://www.wired.com/coupons/doordash"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Dyson",
+      "url": "https://www.wired.com/coupons/dyson"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Booking.com",
+      "url": "https://www.wired.com/coupons/booking-com"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Instacart",
+      "url": "https://www.wired.com/coupons/instacart"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Priceline",
+      "url": "https://www.wired.com/coupons/priceline"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Expedia",
+      "url": "https://www.wired.com/coupons/expedia"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Wayfair",
+      "url": "https://www.wired.com/coupons/wayfair"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Groupon",
+      "url": "https://www.wired.com/coupons/groupon"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Hotels.com",
+      "url": "https://www.wired.com/coupons/hotels-com"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Uber Eats",
+      "url": "https://www.wired.com/coupons/ubereats"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "adidas",
+      "url": "https://www.wired.com/coupons/adidas"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "SHEIN",
+      "url": "https://www.wired.com/coupons/shein"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "AliExpress",
+      "url": "https://www.wired.com/coupons/aliexpress"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Valvoline",
+      "url": "https://www.wired.com/coupons/valvoline"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "The Motley Fool",
+      "url": "https://www.wired.com/coupons/motley-fool"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "#navigation",
+      "name": "Chewy",
+      "url": "https://www.wired.com/coupons/chewy"
+    }
+  ]
+}</script>
+
+    <meta name="googlebot" content="noindex, nofollow">
+
+
+
+
+
+    <meta name="description" content="Find top coupons and discounts on various shops within the Department Stores, Hobby &amp; Lifestyle, Home &amp; Garden, Sports &amp; Outdoors, and Tech &amp; Electronics categories. ">
+
+
+
+    <link rel="canonical" href="https://www.wired.com/coupons/categories">
+
+
+
+
+
+    <link rel="manifest" href="https://www.wired.com/coupons/site.webmanifest">
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=57&amp;height=57&amp;format=png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=72&amp;height=72&amp;format=png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=76&amp;height=76&amp;format=png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=114&amp;height=114&amp;format=png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=120&amp;height=120&amp;format=png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=144&amp;height=144&amp;format=png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=152&amp;height=152&amp;format=png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=180&amp;height=180&amp;format=png">
+
+<link rel="shortcut icon" type="image/png" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=48&amp;height=48&amp;format=png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=96&amp;height=96&amp;format=png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=32&amp;height=32&amp;format=png">
+
+<meta name="msapplication-TileColor" content="#E60000">
+<meta name="msapplication-TileImage" content="https://www.wired.com/coupons/static/image_setting/132/favicon/wired-favicon-new.png?width=144&amp;height=144&amp;format=png">
+<meta name="msapplication-config" content="https://www.wired.com/coupons/browserconfig">
+<meta name="theme-color" content="#ffffff">
+
+
+
+  <meta name="twitter:card" content="summary">
+
+<meta name="twitter:url" content="https://www.wired.com/coupons/categories">
+
+
+
+   <meta name="twitter:image" content="https://www.wired.com/coupons/static/image_setting/132/logo/wired_coupons_logo.png">
+
+
+
+  <meta name="twitter:title" content="Coupons by category">
+
+
+
+    <meta name="twitter:description" content="Find top coupons and discounts on various shops within the Department Stores, Hobby &amp; Lifestyle, Home &amp; Garden, Sports &amp; Outdoors, and Tech &amp; Electronics categories. ">
+
+
+
+
+<meta property="og:url" content="https://www.wired.com/coupons/categories">
+
+<meta property="og:type" content="website">
+
+
+  <meta property="og:title" content="Coupons by category">
+
+
+
+    <meta property="og:description" content="Find top coupons and discounts on various shops within the Department Stores, Hobby &amp; Lifestyle, Home &amp; Garden, Sports &amp; Outdoors, and Tech &amp; Electronics categories. ">
+
+
+
+   <meta property="og:image" content="https://www.wired.com/coupons/static/image_setting/132/logo/wired_coupons_logo.png">
+
+
+
+  <meta property="og:site_name" content="WIRED coupons">
+
+
+<meta property="og:locale" content="en-US">
+
+
+
+  
+
+  <link rel="preload" href="https://www.wired.com/coupons/assets/packs/static/app/themes/simple_2019/assets/fonts/simple_2019/fonts/simple-75b056b0c9a9ed6ed770.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+
+  <link rel="preload" href="https://www.wired.com/coupons/static/fonts/83/BreveText-Book.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <link rel="preload" href="https://www.wired.com/coupons/static/fonts/83/WiredMono-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <link rel="preload" href="https://www.wired.com/coupons/static/fonts/83/DrukCyr-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <link rel="preload" href="https://www.wired.com/coupons/static/fonts/83/Apercu-Bold-Pro.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <link rel="preload" href="https://www.wired.com/coupons/static/fonts/83/Apercu-Regular-Pro.woff2" as="font" type="font/woff2" crossorigin="">
+
+
+
+
+
+  <style>
+    @font-face {
+      font-weight: normal;
+      font-family: 'simple';
+      font-style: normal;
+      src: url('https://www.wired.com/coupons/assets/packs/static/app/themes/simple_2019/assets/fonts/simple_2019/fonts/simple-75b056b0c9a9ed6ed770.ttf') format('truetype'),
+      url('https://www.wired.com/coupons/assets/packs/static/app/themes/simple_2019/assets/fonts/simple_2019/fonts/simple-d25e91c4b5b032a1dae4.woff') format('woff');
+      font-display: swap;
+    }
+  </style>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-E513DF63RS&amp;l=eventLayer"></script>
+  <script>
+    window.eventLayer = window.eventLayer || [];
+
+    function gtag() {
+      eventLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-E513DF63RS', {
+      send_page_view: false,
+      cookie_domain: 'www.wired.com',
+      cookie_flags: 'SameSite:Lax'
+    });
+  </script>
+
+
+  
+    <noscript>
+
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-N5V5TJ3" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+
+    </noscript>
+    <noscript>
+
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5HBJC2K" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+
+    </noscript>
+
+
+  <style>svg{font-family:serif!important;overflow:hidden;vertical-align:middle}body a{transition:none}@font-face{font-weight:normal;font-family:simple;font-style:normal;src:url("https://www.wired.com/coupons/assets/packs/static/app/themes/simple_2019/assets/fonts/simple_2019/fonts/simple-75b056b0c9a9ed6ed770.ttf") format("truetype"),url("https://www.wired.com/coupons/assets/packs/static/app/themes/simple_2019/assets/fonts/simple_2019/fonts/simple-d25e91c4b5b032a1dae4.woff") format("woff");font-display:swap}@font-face{font-display:swap;font-family:BreveText-Book;src:url("https://www.wired.com/coupons/static/fonts/83/BreveText-Book.woff2") format("woff2")}@font-face{font-display:swap;font-family:WiredMono-Regular;src:url("https://www.wired.com/coupons/static/fonts/83/WiredMono-Regular.woff2") format("woff2")}@font-face{font-display:swap;font-family:DrukCyr-Bold;src:url("https://www.wired.com/coupons/static/fonts/83/DrukCyr-Bold.woff2") format("woff2")}@font-face{font-display:swap;font-family:Apercu-Bold;font-style:normal;font-weight:700;src:url("https://www.wired.com/coupons/static/fonts/83/Apercu-Bold-Pro.woff2") format("woff2")}@font-face{font-display:swap;font-family:Apercu-Regular;font-style:normal;font-weight:400;src:url("https://www.wired.com/coupons/static/fonts/83/Apercu-Regular-Pro.woff2") format("woff2")}@font-face{font-display:swap;font-family:ProximaNova;font-style:normal;font-weight:400;src:url("https://www.wired.com/coupons/static/fonts/83/ProximaNova-Regular.woff2") format("woff2")}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}header{display:block}body{background-color:rgb(255, 255, 255);color:rgb(33, 37, 41);display:grid;font-family:BreveText-Book,serif;font-size:1rem;font-weight:400;grid-template-columns:100%;grid-template-rows:auto;line-height:1.5;margin:0;text-align:left}h1,h2,h3,h6{font-family:Apercu-Bold,serif;margin-bottom:0.5rem;margin-top:0}ol,p,ul{margin-bottom:1rem;margin-top:0}ul ul{margin-bottom:0}strong{font-weight:bolder}a{text-decoration:none;background-color:transparent;color:rgb(117, 117, 117);cursor:pointer;transition-duration:0.2s;transition-property:color,background,text-shadow;transition-timing-function:ease-in-out}img{border:0;height:auto;max-width:100%;vertical-align:bottom}label{display:inline-block;margin-bottom:0.5rem}button{border-radius:0;text-transform:none}button,input{font-family:inherit;font-size:inherit;line-height:inherit;margin:0;overflow:visible}[role=button],[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}[type="submit"],button{appearance:button}fieldset{border:0;margin:0;min-width:0;padding:0}[type="search"]{appearance:none;outline-offset:-2px}[type="search"]::-webkit-search-decoration{appearance:none}::-webkit-file-upload-button{appearance:button;font:inherit}.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-left:calc(var(--bs-gutter-x)*-.5);margin-right:calc(var(--bs-gutter-x)*-.5);margin-top:calc(var(--bs-gutter-y)*-1)}.row > *{box-sizing:border-box;flex-shrink:0;margin-top:var(--bs-gutter-y);max-width:100%;padding-left:calc(var(--bs-gutter-x)*.5);padding-right:calc(var(--bs-gutter-x)*.5);width:100%}.col{flex:1 0 0%}.col-2{flex:0 0 auto;width:16.6667%}.col-10{flex:0 0 auto;width:83.3333%}.col-12{flex:0 0 auto;width:100%}.container{--bs-gutter-x:1.5rem;--bs-gutter-y:0;margin-left:auto;margin-right:auto;padding-left:calc(var(--bs-gutter-x)*.5);padding-right:calc(var(--bs-gutter-x)*.5);width:100%}.justify-content-center{justify-content:center!important}.align-items-center{align-items:center!important}.roberto,i[class^="icon-"]{font-feature-settings:normal;font-style:normal;font-variant:normal;font-weight:400;text-transform:none;line-height:1.2;speak:none;-webkit-font-smoothing:antialiased;font-family:simple!important}.icon-lens::before{content:""}.icon-house::before{content:""}.icon-chevron-right::before{content:""}.icon-cross::before{content:""}.icon-info::before{content:""}.roberto{line-height:1}.roberto-category-home::before{content:""}.roberto-category-sport::before{content:""}.roberto-category-technology::before{content:""}.roberto-category-internet::before{content:""}.roberto-category-department-store::before{content:""}.roberto-category-hobby::before{content:""}#content,.main-content{grid-area:content}.hidden{display:none!important}.topbar__logo img{height:auto;max-width:100%;max-height:100%;width:auto}.browserupgrade{display:none}.topbar{align-items:center;background-color:rgb(0, 28, 76);grid-area:topbar;height:70px;display:none}.topbar__logo{display:block;max-height:70px}.m-navigation,.m-navigation__list{font-family:BreveText-Book,serif;margin:0}.m-navigation{grid-area:m-navigation;padding:0;background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(229, 229, 229);display:grid;grid-template-areas:". nav-container .";grid-template-columns:200px 1fr 80px;justify-self:flex-start;position:static;width:100%;z-index:1060}.m-navigation__list{align-items:center;background-color:rgb(255, 255, 255);display:flex;justify-content:flex-start;list-style-type:none;height:auto;padding:0 8px;width:100%}.m-navigation__arrow{background-color:transparent;color:rgb(255, 255, 255);display:none;font-size:20px;height:24px;position:absolute;text-align:center;top:7px;width:29px}.m-navigation__arrow--left{left:0;transform:rotate(180deg)}.m-navigation__arrow--right{right:0}.m-navigation__item{align-items:center;height:100%;white-space:nowrap;display:none;padding:0}.m-navigation__item svg{pointer-events:none}.m-navigation__link{text-transform:uppercase;color:rgb(0, 0, 0);display:inline-block;font-family:WiredMono-Regular,serif;font-size:11px;font-weight:400;letter-spacing:0.0833333em;line-height:12px;padding:22px 25px 22px 0}.m-navigation__chevron{display:inline-block;margin-left:5px}.m-navigation__chevron svg{margin-top:-2px}.m-navigation__chevron svg path{fill:rgb(255, 255, 255)}.sub-menu{background-color:rgb(0, 0, 0);border-top:none;display:none;left:0;padding:21px 0 10px;position:absolute;top:60px;white-space:normal;width:100%;z-index:1041}.sub-menu__list{list-style-type:none;margin:0 auto;max-width:1200px;padding-left:0}.sub-menu__item{display:inline-block;margin-bottom:8px}.sub-menu__link{color:rgb(0, 0, 0);display:inline-block;font-size:14px;font-weight:700;padding:7px 15px;text-decoration:none;text-transform:uppercase}.search-container{padding:13px 0 10px;position:relative}.search-container .col-lg-3{position:relative}.m-search-box__form{position:relative;width:100%}.m-search-box__form ::-webkit-input-placeholder{color:rgb(0, 0, 0);font-style:italic;opacity:1}.m-search-box__form--small{height:35px;position:relative}.m-search-box__form--small .m-search-box__submit{background:0 0;color:rgb(0, 0, 0);font-size:13px;height:30px;right:4px;width:30px;top:0}.m-search-box__form--small .m-search-box__input{display:inline-block;outline:0;box-shadow:rgb(236, 236, 236) 0 0 3px inset;padding:6px 18px}.m-search-box__input{background:rgb(255, 255, 255);border:1px solid rgb(211, 211, 211);font-size:12px;padding:14px 0;pointer-events:auto;text-indent:0;width:100%;font-family:WiredMono-Regular,serif;letter-spacing:0.92px}.m-search-box__input::-webkit-search-cancel-button{display:none}.m-search-box__submit{background:rgb(255, 255, 255);border:0;border-radius:50%;color:rgb(0, 0, 0);cursor:pointer;font-size:17px;height:32px;line-height:1;padding:0;position:absolute;right:11px;top:9px;width:32px}.search-header-results{background-color:rgb(246, 246, 246);position:absolute;width:calc(100% - var(--bs-gutter-x));z-index:100;box-shadow:rgba(1, 83, 131, 0.2) 0 8px 24px 2px}.f-widget__title{font-size:11px;font-weight:700;line-height:20px}.f-widget__content{margin-top:0}.f-widget__list{list-style-type:none;padding-left:0}.f-widget__item{line-height:1;margin-bottom:15px;position:relative}.f-widget__item::before{border:1px solid rgb(73, 175, 249);border-radius:50%;color:rgb(0, 119, 204);content:"";display:block;height:8px;left:0;position:absolute;top:4px;width:8px}.f-widget__item a{color:rgb(153, 153, 153);font-size:12px;font-weight:400}.footer{grid-area:footer;transition:0.1s;color:rgb(255, 255, 255);margin-top:0;background-color:rgb(0, 0, 0);border-bottom:1px solid rgb(41, 41, 41);padding:0}.breadcrumbs{font-size:12px;line-height:1.2;overflow:hidden}.breadcrumbs__list{display:flex;list-style-type:none;margin:0;padding:9px 0}.breadcrumbs__item{padding:0 3px;white-space:nowrap}.breadcrumbs__item--active{color:rgb(34, 34, 34)}.breadcrumbs__item::before{color:rgb(34, 34, 34);content:"";font-family:simple,serif;font-size:9px;margin:0 3px 0 0}.breadcrumbs__item:first-of-type{padding-left:0}.breadcrumbs__item:first-of-type::before{display:none}.breadcrumbs__item a{color:rgb(5, 125, 188);font-style:italic}#my-modal .modal__dialog{max-height:88%;overflow-y:auto;border:0}#my-modal .modal__close-btn{background-color:initial;color:rgb(0, 0, 0);padding:0;position:absolute;right:20px;top:20px}#my-modal .modal__close-btn i::before{font-size:24px}.head-disclaimer{background:rgb(255, 255, 255);color:rgb(102, 102, 102);font-size:12px;padding:13px;position:relative;text-align:center;top:0;width:100%;border-bottom:1px solid rgb(219, 215, 215);grid-area:head-disclaimer}.head-disclaimer-text{margin:0}.head-disclaimer a{color:rgb(5, 125, 188)}.scroll-to-top{align-items:center;background-color:rgb(255, 255, 255);border:1px solid rgba(0, 0, 0, 0.2);border-radius:50%;bottom:30px;box-shadow:rgba(0, 0, 0, 0.3) 0 0 0;cursor:pointer;display:flex;height:40px;justify-content:center;opacity:0;position:fixed;right:30px;transition:0.1s ease-in-out;visibility:hidden;width:40px;z-index:900}.scroll-to-top i{font-size:18px;transform:rotate(-90deg)}.flyout .coupon__logo--green{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 149 163'%3E%3Cpath fill='%236A7256' fill-rule='evenodd' d='M70 7.6a61 61 0 0 1 4-6.5c1.3 1.8 2.6 4 3.9 6.5a74 74 0 0 1 68.6 57A74 74 0 0 1 107 148l-.1-.4-.8-1.4-.1-.4a71.6 71.6 0 0 0 38.2-80.7 71.6 71.6 0 0 0-65-55c7.7 16.1 13.1 42.6-4.2 66.8v49.5c6-24 28.5-33 40-34.6-2.5 11.8-13.7 34.8-40 38V163h-2v-52.8c-26.6-3-38-26.2-40.4-38 11.8 1.6 35.2 11 40.4 36.5V76.9a64.9 64.9 0 0 1-4.2-66.8A71.6 71.6 0 0 0 44 146.3l-.1.3-.7 1.5-.2.3A74 74 0 0 1 28 24 74 74 0 0 1 70 7.6' clip-rule='evenodd'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;height:80px;width:80px}.modal{inset:0px;outline:0;overflow:hidden;pointer-events:none;position:fixed;z-index:1050}.modal--hidden{display:none}.modal__dialog{background:rgb(255, 255, 255);border:1px solid rgb(211, 211, 211);box-shadow:rgba(0, 0, 0, 0.11) 0 1px 3px;margin:100px auto;max-width:750px;pointer-events:auto;position:relative}.modal__close-btn{position:absolute;right:24px;top:20px}.backdrop{background-color:rgba(0, 0, 0, 0.4);display:none;inset:0px;position:fixed;z-index:1040}body.categories.index{grid-template-areas:"partner-header" "partner-menu-hamburger" "m-navigation" "head-disclaimer" "sub-nav-bar" "content" "footer" "partner-footer" "new-disclaimer"}.categories.index .page-title{margin:26px 0 3px;text-align:center}.categories .page-subtitle,.categories .page-title{text-align:center}.categories__list{display:flex;flex-wrap:wrap;list-style-type:none;margin-top:30px;padding-left:0}.categories__item{margin-bottom:18px}.categories__link{background-color:rgb(255, 255, 255);box-shadow:rgba(0, 0, 0, 0.1) 0 0 10px;display:block;font-size:24px;padding:34px 5px 14px;text-align:center;color:rgb(255, 255, 255);text-decoration:none;border:2px solid rgb(0, 0, 0)}.categories__icon,.categories__name{align-items:center;color:rgb(0, 0, 0);display:flex;justify-content:center}.categories__icon{border:2px solid rgb(0, 0, 0);border-radius:50%;font-size:31px;height:64px;margin:0 auto;width:64px}.categories__name{height:68px;line-height:1.1;font-family:WiredMono-Regular,serif}.categories__seo-text{margin-top:22px;border-top:4px solid rgb(0, 0, 0);padding-top:22px}.categories__seo-text p{font-size:14px;line-height:1.3;margin-left:66px}.categories__seo-icon{align-items:center;background-color:rgb(255, 255, 255);border:2px solid rgb(0, 0, 0);border-radius:0;display:flex;float:left;font-size:22px;height:48px;justify-content:center;width:48px}.page-title{font-size:34px;grid-area:title;margin:5px 0;font-family:Apercu-Regular,serif}.page-subtitle{font-size:22px;grid-area:subtitle;margin:0;font-family:BreveText-Book,serif;font-weight:400}.cLnSeF{grid-area:partner-menu-hamburger}.cLnSeF .drawer__overlay{background-color:transparent;inset:0px;pointer-events:none;position:fixed;z-index:400}.cLnSeF .drawer{animation:0.3s fadeIn;background-color:rgb(255, 255, 255);max-height:100%;outline:currentcolor;overflow:hidden;padding:124px 0 0;transform:translate3d(-100%, 0, 0);transition:transform 0.3s cubic-bezier(0, 0, 0.2, 1)}.BaseWrap-sc-TURhJ.SecondaryMenuBottom-bHYDGv.eTiIvU.jfnuGx{border-top:1px solid rgb(51, 51, 51)}.kkWMSq.kkWMSq{width:auto}.bKMgMh.bKMgMh,.kkWMSq{grid-template-columns:repeat(4, 1fr)}.bKMgMh.bKMgMh{display:grid;gap:var(--grid-gap);margin:0 auto;max-width:1600px;padding-left:calc(var(--grid-margin)*1);padding-right:calc(var(--grid-margin)*1);--grid-margin:4rem;--grid-gap:2rem}.kkWMSq{box-sizing:content-box;height:100%;max-width:none;overflow-y:scroll;scrollbar-width:none}.kkWMSq .GridItem-buSdEM{grid-column:1/-1}.izIlnC{padding-bottom:2rem}.gYFSia{margin-bottom:2rem;margin-top:3rem}.bAnqVu,.gYFSia .navigation__list{display:flex;flex-direction:column;margin:0}.bAnqVu{flex-flow:column;list-style:none;padding-left:0}.gYFSia .navigation__list-item{align-items:center;display:flex;margin-bottom:2.2rem;position:relative}.gYFSia .navigation__list-item:last-of-type{margin-bottom:0}.eHxHZj{display:flex;padding:0}.gYFSia .navigation__list-item .navigation__link{display:block}.gYFSia .navigation__link,.hAAyfq .navigation__link{color:rgb(0, 0, 0);cursor:pointer;font-feature-settings:normal;font-style:normal;letter-spacing:normal;line-break:auto;overflow-wrap:normal;text-transform:none;transition-duration:0.2s;transition-property:color,background,text-shadow;transition-timing-function:ease-in-out}.gYFSia .navigation__link:link{color:rgb(0, 0, 0);text-decoration:inherit}.gYFSia .navigation__link{font-family:Apercu-Regular,serif;font-size:28px;font-weight:700;line-height:1em}.jfnuGx{border-color:rgb(229, 229, 229);border-top-width:1px;border-top-style:solid;padding-bottom:2rem;padding-top:2rem}.hAAyfq .navigation__list-item .navigation__link{display:block}.hAAyfq .navigation__link{font-family:WiredMono-Regular,sans-serif;font-size:12px;font-weight:400;line-height:1.33em}.hAAyfq .navigation__link:link{color:rgb(0, 0, 0);text-decoration:inherit}.hAAyfq .navigation__list-item{align-items:center;display:flex;margin-bottom:1rem;position:relative}.eTiIvU{border:0;margin:0}.w-topbar{background-color:rgb(255, 255, 255);border-bottom:1px solid rgb(229, 229, 229);display:grid;grid-area:partner-header;grid-template-areas:"hamburger logo navigation links search" "search-form search-form search-form search-form search-form";grid-template-columns:54px 145px 8fr 4fr 80px;position:relative;text-align:center;z-index:1061}.w-topbar__hamburger{cursor:pointer;grid-area:hamburger}.w-topbar__hamburger,.w-topbar__search{align-items:center;display:flex;justify-content:center}.w-topbar__logo{align-items:center;display:flex;grid-area:logo}.w-topbar__logo svg{display:inline-block;height:26px;width:129px}.w-topbar__links{grid-area:links}.w-topbar__list{list-style-type:none;margin:0;padding:0}.w-topbar__item{display:inline-block;padding:12px 0}.w-topbar__item:first-child{margin-right:11px;position:relative}.w-topbar__item:first-child::after{background-color:rgb(229, 229, 229);content:"";height:32px;position:absolute;right:-7px;width:1px}.w-topbar__link{color:rgb(0, 0, 0);display:inline-block;font-family:WiredMono-Regular,serif;font-size:11px;line-height:32px;padding:0 12px;text-transform:uppercase}.w-topbar__link--subscribe{background:rgb(47, 102, 151);border-radius:2px;color:rgb(255, 255, 255);line-height:22px;padding:0 10px}.w-topbar__search{cursor:auto;grid-area:search}.w-topbar__search svg{cursor:pointer;height:100%}.w-topbar__form{background-color:rgb(246, 246, 246);border-top:1px solid rgb(204, 204, 204);box-shadow:rgba(0, 0, 0, 0.23) 0 3px 3px 0;color:transparent;display:none;grid-area:search-form;height:100px;left:0;line-height:100px;position:absolute;width:100%}footer,nav{display:block}.w-topbar__input{background-color:transparent;border:0;color:rgb(0, 0, 0);font-size:30px;font-weight:400;height:40px;left:0;position:absolute;right:0;text-align:center;top:calc(50% - 20px);width:100%;z-index:1}.w-topbar__label{background-color:transparent;border:0;height:100px;left:0;position:absolute;right:0;top:0;width:100%}.w-topbar__submit{position:absolute;right:0;top:0;visibility:hidden}.hgjcc{cursor:pointer;text-decoration:none}.drawer__overlay .grid{display:grid;grid-template-columns:repeat(4, 1fr);margin:0 auto;max-width:1600px;width:auto}.grid-margins{padding-left:3rem;padding-right:3rem}.BaseWrap-sc-gjQpdd.RowWrapper-UmqTg.BasePageSiteFooterRow-kpEBGH a{transform:none}.BasePageSiteFooterRow-kpEBGH{font-family:BreveText-Book,helvetica,sans-serif;font-feature-settings:normal;font-size:19px;font-style:normal;font-weight:400;letter-spacing:0.00568421em;line-break:auto;line-height:1.47368em;overflow-wrap:normal;text-transform:none}.jqlJed{background-color:rgb(0, 0, 0);margin-top:3rem}.HEhan{display:block;width:100%}.iUEiRd{grid-area:partner-footer;margin:0}.eRggVV.eRggVV{--grid-gap:1rem;--grid-margin:1.5rem;display:grid;grid-template-columns:repeat(4, 1fr);gap:var(--grid-gap);margin:0 auto;max-width:1600px;padding-left:calc(var(--grid-margin)*1);padding-right:calc(var(--grid-margin)*1);width:100%}.zQNeb .GridItem-buujkM{grid-column:1/-1}.jXecHG{background-color:rgb(0, 0, 0);display:block}.cQgGDp{--grid-gap:1rem;--grid-margin:1.5rem;display:grid;grid-template-columns:repeat(4, 1fr);margin:0 auto;max-width:1600px;width:100%;column-gap:var(--grid-gap);row-gap:var(--grid-gap)}.cQgGDp.cQgGDp{row-gap:0;grid-template-areas:"f-brand f-brand f-brand f-brand" "f-nav f-nav f-nav f-nav" "f-nav-contact f-nav-contact f-nav-contact f-nav-contact" "f-meta f-meta f-meta f-meta";justify-items:center;padding-top:2rem;text-align:center}.cdkwFG{grid-area:f-brand}.cQgGDp.cQgGDp .SiteFooterBrandInfo-cdoqKy{border-bottom:1px solid rgb(51, 51, 51);grid-area:1/1/auto/-1;text-align:center;width:100%}.eigdAF{align-self:end}.cQgGDp.cQgGDp .SiteFooterLogo-eYlNHY{margin-bottom:2rem}.jvZaPI{display:block;opacity:1;overflow:hidden;transition:opacity 1s}.kubVDn{display:flex;justify-content:center;margin:0 auto;max-height:2rem;-webkit-box-pack:center}.dUOtEa{display:inline-block;position:relative;width:-webkit-fill-available}.kubVDn .ResponsiveImageContainer-eybHBd{max-height:inherit;width:auto}.ixXXMs{display:none}.knabMb{cursor:pointer;text-decoration:none}.knabMb.navigation__link{color:rgb(0, 0, 0);display:inline-block;font-family:WiredMono-Regular,serif;font-size:11px;font-weight:400;letter-spacing:0.0833333em;line-height:12px;padding:22px 8px;text-transform:uppercase}.eMPBBw{display:flex;flex-wrap:wrap;list-style:none;margin-bottom:0;padding-left:0}.eSpvgx{display:contents}.cUTUWM{align-items:center;display:flex;flex-direction:column;height:100%;justify-content:center}.cQgGDp.cQgGDp .SiteFooterCollectionContainer-iKPzYu{display:none}#my-modal{z-index:1070}#my-modal .modal__content{border-top:5px solid rgb(0, 0, 0)}.sub-nav-bar{background-color:rgb(255, 255, 255);grid-area:sub-nav-bar}.m-navigation .container{grid-area:nav-container;margin:0}.m-navigation__item.has-sub-menu,.m-navigation__item.has-sub-menu__categories,.m-navigation__item.m-navigation__item--top-coupons{display:inline-block}.m-navigation__link .m-navigation__chevron svg path{fill:rgb(0, 0, 0)}.m-navigation .sub-menu{background:rgb(255, 255, 255);border-bottom:1px solid rgba(0, 0, 0, 0.2);top:auto}.m-navigation .sub-menu__list{display:grid;grid-template-columns:repeat(auto-fill, minmax(178px, 1fr));max-width:890px}.m-navigation .sub-menu__item{text-align:left}.m-navigation .sub-menu__item--see-all{grid-area:auto/1/auto/-1;margin-top:1.2rem;padding-top:1.2rem;position:relative;text-align:center}.m-navigation .sub-menu__item--see-all::before{border-top:1px solid rgb(0, 0, 0);content:"";left:50%;max-width:90vw;position:absolute;top:0;transform:translateX(-50%);width:140%}.m-navigation .sub-menu__item--see-all a{font-family:WiredMono-Regular,serif;font-size:11px;font-weight:400}.m-navigation .sub-menu__link{border-radius:25px;font-family:Apercu-Bold,serif;font-size:16px;letter-spacing:0}.m-search-box__input::-webkit-input-placeholder{font-family:WiredMono-Regular,serif;font-size:11px;font-style:normal;text-transform:uppercase}.m-search-box__submit i{font-size:12px;font-weight:900;text-shadow:rgb(0, 0, 0) 0 1px 1px}.breadcrumbs__item a,.breadcrumbs__item--partner i::before{font-family:BreveText-Book,serif;font-size:12px}.breadcrumbs__item span{font-style:italic}.breadcrumbs__item--partner{margin-top:-1px}.breadcrumbs__item--partner i::before{content:"Home";font-style:italic}.footer .container{max-width:1600px;padding:0 24px}.footer .row{margin:0}.footer .col-sm-4{display:none}.footer .col-sm-4,.footer .col-sm-8{padding-left:0;width:50%}.footer .f-widget{padding:30px 0}.footer .f-widget__title{font-family:WiredMono-Regular,serif;margin-bottom:5px;text-transform:uppercase}.footer .f-widget__content{display:flex;justify-content:flex-start}.footer .f-widget__item{margin-bottom:2px;text-align:left}.footer .f-widget__item a{font-family:ProximaNova,helvetica,sans-serif;line-height:1;padding:0 18px 2px 0}.footer .f-widget__item::before{content:none}.categories .page-title{font-size:34px;line-height:40px}.categories .page-subtitle{font-size:22px;line-height:33px}@media (min-width: 576px){.col-sm-4{flex:0 0 auto;width:33.3333%}.col-sm-6{flex:0 0 auto;width:50%}.col-sm-8{flex:0 0 auto;width:66.6667%}.container{max-width:540px}}@media (min-width: 768px){.col-md-3{flex:0 0 auto;width:25%}.col-md-8{flex:0 0 auto;width:66.6667%}.offset-md-2{margin-left:16.6667%}.container{max-width:720px}.w-topbar__list{text-align:right}.drawer__overlay .grid{grid-template-columns:repeat(12, 1fr)}.cQgGDp,.eRggVV.eRggVV{--grid-gap:1.5rem;--grid-margin:3rem;grid-template-columns:repeat(12, 1fr)}.cQgGDp.cQgGDp{grid-template-areas:"f-brand f-brand f-brand f-brand f-brand f-brand f-brand f-brand f-brand f-brand f-brand f-brand" "f-nav f-nav f-nav f-nav f-nav f-nav f-nav-contact f-nav-contact f-nav-contact f-nav-contact f-nav-contact f-nav-contact" "f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta"}.m-navigation__link .m-navigation__chevron{display:none}.footer .container{padding:0 48px}}@media (min-width: 768px) and (max-width: 991px){.m-search-box__form--small .m-search-box__input{min-width:175px;position:relative;right:80px}}@media (min-width: 992px){.col-lg-3{flex:0 0 auto;width:25%}.col-lg-9{flex:0 0 auto;width:75%}.col-lg-12{flex:0 0 auto;width:100%}.offset-lg-9{margin-left:75%}.container{max-width:960px}.footer .col-sm-4,.footer .col-sm-8{max-width:372px;width:25%}}@media (min-width: 1024px){.cQgGDp,.eRggVV.eRggVV{--grid-gap:2rem}.cQgGDp.cQgGDp{grid-template-areas:"f-brand f-brand f-brand f-brand f-nav f-nav f-nav f-nav f-nav-contact f-nav-contact f-nav-contact f-nav-contact" "f-brand f-brand f-brand f-brand f-nav f-nav f-nav f-nav f-nav-contact f-nav-contact f-nav-contact f-nav-contact" "f-brand f-brand f-brand f-brand f-nav f-nav f-nav f-nav f-nav-contact f-nav-contact f-nav-contact f-nav-contact" "f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta";justify-items:start;text-align:left}.cQgGDp.cQgGDp .SiteFooterBrandInfo-cdoqKy{display:grid;grid-template-columns:repeat(12, 1fr)}.cQgGDp.cQgGDp .SiteFooterBrandInfo-cdoqKy .SiteFooterLogo-eYlNHY{grid-column:6/-6}.kubVDn{justify-content:flex-start;margin:0;-webkit-box-pack:start}.jXecHG .SiteFooterLogo-eYlNHY .SiteFooterLogoResponsiveAsset-ckjzWk{justify-content:center}.cUTUWM{flex-direction:row;grid-area:footer-notices-collection}}@media (min-width: 1240px){.container{max-width:1200px}.footer .container{padding:0 64px}.categories.index .container{max-width:1200px}}@media (min-width: 1280px){.cQgGDp,.eRggVV.eRggVV{--grid-margin:4rem}.cQgGDp.cQgGDp{grid-template-areas:"f-brand f-brand f-brand f-brand f-brand f-brand f-nav f-nav f-nav f-nav-contact f-nav-contact f-nav-contact" "f-brand f-brand f-brand f-brand f-brand f-brand f-nav f-nav f-nav f-nav-contact f-nav-contact f-nav-contact" "f-brand f-brand f-brand f-brand f-brand f-brand f-nav f-nav f-nav f-nav-contact f-nav-contact f-nav-contact" "f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta f-meta";position:relative}}@media (max-width: 1239px){body.categories.index{grid-template-areas:"partner-header" "partner-menu-hamburger" "m-navigation" "head-disclaimer" "sub-nav-bar" "content" "footer" "partner-footer" "new-disclaimer"}}@media (max-width: 991px){.page-title{font-size:16px}.page-subtitle{font-size:14px}.m-navigation .sub-menu__list{padding:0 15px}}@media (max-width: 767px){body .m-navigation__list{height:auto}.m-navigation .container{max-width:1240px;overflow-x:scroll;scroll-behavior:smooth}.m-search-box__form--small .m-search-box__input{display:inline-block;pointer-events:auto;transform:translateX(200px);transition:transform 0.3s ease-in-out}.m-search-box__form--small .m-search-box__input-wrp{overflow:hidden;pointer-events:none;position:absolute;right:35px;width:200px}.breadcrumbs{overflow-x:scroll}.breadcrumbs__list{display:flex;margin-bottom:0}.categories.index .page-title{text-align:center}.cLnSeF .drawer{max-width:100%;padding-top:87px}.bKMgMh.bKMgMh{--grid-margin:1.5rem}.w-topbar{border-bottom:none;grid-template-areas:"hamburger logo links" "navigation navigation navigation";grid-template-columns:0.6fr 3fr 1.3fr}.w-topbar__logo{text-align:left}.w-topbar__item:first-child{display:none}.w-topbar__item{padding:9px 0}.w-topbar__search{display:none}.knabMb.navigation__link{padding:14px 0}.w-topbar .fKSZRK{display:none}#my-modal .modal__dialog{border-radius:5px;margin:0 auto;top:50%;transform:translateY(-50%);width:calc(100% - 12px)}.m-navigation{border-top:1px solid rgb(229, 229, 229);grid-template-areas:"nav-container";grid-template-columns:auto;width:100%}.m-navigation .container{padding:0}.m-navigation .row{margin:0;width:100%!important}.m-navigation__list{height:40px;display:flex;justify-content:space-around;padding:0}.m-navigation__item{padding:10px}.m-navigation__link{top:40px;padding:14px 0}.m-navigation .sub-menu{top:88px}.head-disclaimer{font-size:9px;padding:0 7px 7px}.m-search-box__submit i{font-size:19px;text-shadow:none}.m-search-box__form--small .m-search-box__input-wrp,.m-search-box__form--small .m-search-box__submit{top:3px}.search-container{line-height:20px;padding:7px 0 6px}.breadcrumbs__list{padding:0}}@media (max-width: 575px){.sub-menu{padding:21px 0 10px;top:40px}body.categories.index{grid-template-areas:"partner-header" "partner-menu-hamburger" "m-navigation" "head-disclaimer" "sub-nav-bar" "content" "footer" "partner-footer" "new-disclaimer"}.categories__seo-text p{margin-left:0}.categories__seo-icon,.m-search-box__submit::before{display:none}.footer .f-widget{padding-top:24px}}@media (max-width: 375px){.topbar__logo{margin:0 auto;max-height:35px}.scroll-to-top{bottom:15px;right:15px}.modal__dialog{margin:20px auto}}</style>
+
+  <script>
+    var locale = "en-US";
+    var rootDir = "/coupons";
+  </script>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="YlgkGef-ycrvTWZPzYGb3mCwp9pJ-v_AUm0lSILqvzSGRDEdd5k4LvX_zvos_kOVRAfUbifFAAN4quucca4hrA">
+
+
+
+  <style>
+    :root {
+      /* global css variables start */
+      --clicked-coupon-text: "view again";
+      --curr-year: "2024";
+      /* global css variables end */
+    }
+  </style>
+
+<script type="text/javascript" src="/X2m5p_ep1tnK-9lbRGdqfp4KzXBZTH8Qy0rppi2DiKOdfdsPs5zH1C4Dt0pvO7bz7ziRgrHZbKBEwH0k0h57vQ=="></script><script type="text/javascript" src="/QT6s7dLnIVz4HRQtGtJljtWHH05hyLMQZFn3gXHaAyvQAnqMP29OVsRmm5SGn6UVaASyWckgUpEETBQyd9-VnQ=="></script></head>
+
+
+<body class="frontend categories index" data-tracking-data="Category%20-%20Index" data-init="categories_index" data-cg-index="2" data-cg="Category" data-scroll="">
+
+
+
+  <div data-nosnippet="" class="head-disclaimer" role="complementary" aria-label="Head Disclaimer">
+
+    <p class="head-disclaimer-text">
+
+      This coupon content was created by the WIRED team—we select offers based on what our readers are shopping for and regularly check all posted content to make sure it does what it says it will, because we know how annoying broken promo codes are.&nbsp;When you buy something using these coupons, we may earn a small affiliate commission. <a href="https://www.wired.com/coupons/info/about-us.html">Learn more</a>
+
+    </p>
+
+  </div>
+
+
+
+
+<div class="browserupgrade">
+  You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/" rel="nofollow">upgrade your browser</a> to improve your experience.
+</div>
+
+
+
+
+
+
+<div class="w-topbar" data-topbar="">
+  <div class="w-topbar__hamburger" data-icons-menu="">
+    <svg class="w-topbar__hamburger--open" data-hamburger-open="" width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.4375 12H18.5625V10H0.4375V12ZM0.4375 7H18.5625V5H0.4375V7ZM0.4375 0V2H18.5625V0H0.4375Z" fill="#333333"></path>
+    </svg>
+    <svg class="w-topbar__hamburger--close hidden" data-hamburger-close="" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+      <path d="M24.2 25l-9.3-9.2L5.7 25l-.6-.8 9.1-9.1-9.1-9.2.6-.9 9.2 9.3 9.3-9.2.7.8-9.2 9.2 9.2 9.1-.7.8z"></path>
+    </svg>
+  </div>
+
+  <div class="w-topbar__logo">
+    <a href="https://www.wired.com" class="w-topbar__logo-img" rel="" title="Wired - www.wired.com">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="40.3" viewBox="0 0 200 40.3">
+        <path d="M69.5 29.2v4.6h-19v-4.6h6.8V10.8h-6.8V6.2h19v4.6h-6.8v18.4h6.8z"></path>
+        <defs>
+          <path id="g" d="M.2 0h199.6v39.9H.2z"></path>
+        </defs>
+        <clipPath id="h">
+          <use xlink:href="#g" overflow="visible"></use>
+        </clipPath>
+        <path clip-path="url(#h)" d="M37.4 6.2h-5.2L28.4 28 24 7.8c-.2-1.4-.8-1.6-2-1.6h-2.8c-1.2 0-1.8.4-2 1.6L12.8 28 9 6.2H3.4l5.4 26.2c.2 1.2.6 1.4 2 1.4h3.8c1.2 0 1.6-.2 2-1.4l4.2-19 4.2 19c.2 1.2.6 1.4 2 1.4h3.6c1.2 0 1.8-.2 2-1.4l4.8-26.2zm2.8 33.7H.2V0h39.9v39.9z"></path>
+        <g>
+          <defs>
+            <path id="i" d="M.2 0h199.6v39.9H.2z"></path>
+          </defs>
+          <clipPath id="j">
+            <use xlink:href="#i" overflow="visible"></use>
+          </clipPath>
+          <path clip-path="url(#j)" d="M105.9 26.6c0 3 .2 5.2.6 7h5.4c-.2-1.4-.4-4-.4-7.4-.2-4-1.4-4.6-4.2-5.2 3.2-.6 4.6-2 4.6-7 0-4-.6-5.6-1.8-6.6-.8-.8-2.2-1.2-4.4-1.2H88.9v27.6h5.6V23h7.8c1.6 0 2.2.2 2.8.6.6.4.8 1 .8 3m-11.4-8V11h9c1.2 0 1.6.2 1.8.4.4.4.8 1 .8 3.4s-.4 3.2-.8 3.6c-.2.2-.6.4-1.8.4l-9-.2zm25.4 21.3h-40V0h39.9v39.9z"></path>
+        </g>
+        <g>
+          <defs>
+            <path id="k" d="M.2 0h199.6v39.9H.2z"></path>
+          </defs>
+          <clipPath id="l">
+            <use xlink:href="#k" overflow="visible"></use>
+          </clipPath>
+          <path clip-path="url(#l)" d="M168.6 6.2v27.6h13.6c3.8 0 6-.6 7.6-2 2-1.8 3-5 3-11.8s-1-10-3-11.8c-1.6-1.4-3.8-2-7.6-2h-13.6zM187.2 20c0 6-.4 7.4-1.6 8.2-.8.6-1.8.8-3.8.8h-7.6V10.8h7.6c2 0 3 0 3.8.8 1.2 1 1.6 2.4 1.6 8.4m12.6 19.9h-39.9V0h39.9v39.9z"></path>
+        </g>
+        <path d="M127.3 10.8V6.2h23.6V15h-5v-4.2h-9.6v6.6h7.6v4.4h-7.6v7.4h9.8v-4.8h5v9.4h-23.8v-4.6h3.8V10.8h-3.8z"></path>
+      </svg>
+    </a>
+  </div>
+
+  <nav aria-label="Primary" class="fKSZRK dktYVh">
+    <ul class="NavigationListWrapper-gWXLVS eMPBBw navigation__list">
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/security/">Security</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/politics/">Politics</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/gear/">Gear</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/backchannel/">Backchannel</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/business/">Business</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/science/">Science</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/culture/">Culture</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://www.wired.com/category/ideas/">Ideas</a>
+      </li>
+      <li class="dsgTQs navigation__list-item">
+        <a role="link" class="knabMb navigation__link" href="https://shop.wired.com/" rel="noopener" target="_blank">Merch</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="w-topbar__links">
+    <ul class="w-topbar__list">
+      <li class="w-topbar__item">
+        <a target="_blank" class="w-topbar__link w-topbar__link--sign-in" href="https://id.condenast.com/interaction/8-IcPFHFPi8Uu6PpsQYt0/email?xid=57ada41c-3d5c-41b0-8d68-2cdcfcbba9f1&amp;scope=openid%20offline_access&amp;state=%7B%22redirectURL%22%3A%22%2F%22%7D&amp;prompt=select_account%20consent&amp;client_id=condenast.identity.1d626eb68f1c4350244000c9fc888e38&amp;redirect_uri=https%3A%2F%2Fwww.wired.com%2Fauth%2Fcomplete&amp;response_type=code">Sign
+          In</a>
+      </li>
+      <li class="w-topbar__item">
+        <a target="_blank" class="w-topbar__link w-topbar__link--subscribe" href="https://subscribe.wired.com/subscribe/splits/wired/WIR_FAILSAFE?source=HCL_WIR_GLOBAL_NAVBAR_FAILSAFE_0&amp;_ga=2.109308805.1285348461.1631688772-935494788.1627305817">Subscribe</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="w-topbar__search" data-icons="">
+    <svg class="w-topbar__icon--search" data-icon-search-open="" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.42423 1.9995C5.2453 1.9995 4.11465 2.4736 3.28101 3.31752C2.44738 4.16143 1.97905 5.30602 1.97905 6.4995C1.97905 7.69297 2.44738 8.83756 3.28101 9.68148C4.11465 10.5254 5.2453 10.9995 6.42423 10.9995C7.60317 10.9995 8.73382 10.5254 9.56746 9.68148C10.4011 8.83756 10.8694 7.69297 10.8694 6.4995C10.8694 5.30602 10.4011 4.16143 9.56746 3.31752C8.73382 2.4736 7.60317 1.9995 6.42423 1.9995ZM11.6093 10.3345L16.013 14.7925L14.6162 16.2065L10.2125 11.7485C8.90672 12.7143 7.28902 13.1456 5.68269 12.9565C4.07636 12.7673 2.59971 11.9714 1.54782 10.7279C0.495927 9.48448 -0.0537263 7.885 0.00869542 6.24911C0.0711172 4.61322 0.741017 3.06142 1.88453 1.90381C3.02804 0.7462 4.56093 0.0680397 6.1769 0.00484823C7.79286 -0.0583432 9.37286 0.498088 10.6012 1.56295C11.8295 2.62781 12.6156 4.12267 12.8025 5.74881C12.9894 7.37495 12.5633 9.0126 11.6093 10.3345Z" fill="black"></path>
+    </svg>
+    <svg class="w-topbar__icon--close hidden" data-icon-search-close="" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+      <path d="M24.2 25l-9.3-9.2L5.7 25l-.6-.8 9.1-9.1-9.1-9.2.6-.9 9.2 9.3 9.3-9.2.7.8-9.2 9.2 9.2 9.1-.7.8z"></path>
+    </svg>
+  </div>
+  <form class="w-topbar__form" data-active-class="w-topbar__form--opened" data-search-form="" autocomplete="off" method="GET" action="https://www.wired.com/search">
+    <fieldset>
+      <input type="hidden" name="sort" value="score">
+      <input type="hidden" name="page" value="1">
+      <input class="w-topbar__input" name="q" value="">
+      <label class="w-topbar__label">Search</label>
+      <input type="submit" class="w-topbar__submit" id="search-submit">
+    </fieldset>
+  </form>
+</div>
+<div class="DrawerModalWrapper-bXwmMu cLnSeF">
+  <div class="drawer__overlay drawer--overlay-color-black drawer__overlay--align-left" data-active-class="drawer__overlay--open">
+    <div class="drawer drawer--align-left drawer--open-positioned" tabindex="-1" role="dialog" aria-label="Navigation and Sign Up Menu" aria-modal="true">
+      <div class="GridWrapper-vNBSO bKMgMh grid grid-margins grid-items-0 SecondaryMenuGridWrapper-lmzAOb kkWMSq" data-event-boundary="click" data-event-click="{&quot;pattern&quot;:&quot;SecondaryMenu&quot;}" data-in-view="{&quot;pattern&quot;:&quot;SecondaryMenu&quot;}" data-include-experiments="true">
+        <div class="GridItem-buSdEM kFFJpN grid--item">
+          <div class="BaseWrap-sc-TURhJ SecondaryMenuContent-iugcCt eTiIvU izIlnC">
+            <nav aria-label="Primary" class="NavigationWrapper-cfzTvg fpuNqo SecondaryMenuNavigationPrimary-kZRzOC gYFSia drawer__navigation--primary" data-testid="navigation">
+              <ul class="NavigationListWrapper-iOfHJS bAnqVu navigation__list" data-testid="navigation__list">
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/security/" data-testid="navigation__internal-link">Security</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/politics/" data-testid="navigation__internal-link">Politics</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/gear/" data-testid="navigation__internal-link">Gear</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/backchannel/" data-testid="navigation__internal-link">Backchannel</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/business/" data-testid="navigation__internal-link">Business</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/science/" data-testid="navigation__internal-link">Science</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/culture/" data-testid="navigation__internal-link">Culture</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/category/ideas/" data-testid="navigation__internal-link">Ideas</a>
+                </li>
+                <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                  <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://shop.wired.com/" target="_blank" data-testid="navigation__internal-link">Merch</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="BaseWrap-sc-TURhJ SecondaryMenuBottom-bHYDGv eTiIvU jfnuGx">
+              <nav aria-label="Utility" class="NavigationWrapper-cfzTvg fpuNqo SecondaryMenuUtilityLinks-dLksgH ijuNpJ" data-testid="navigation">
+                <ul class="NavigationListWrapper-iOfHJS bAnqVu navigation__list" data-testid="navigation__list">
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <div class="ConsumerMarketingUnitThemedWrapper-kkMeXf hBFNZw consumer-marketing-unit consumer-marketing-unit--nav-drawer" role="presentation" aria-hidden="true">
+                      <div class="consumer-marketing-unit__slot consumer-marketing-unit__slot--nav-drawer">
+                        <div id="cns-ads-slot-type-nav-drawer-1" class="cns-ads-stage cns-ads-slot-type-nav-drawer cns-ads-slot-type-nav-drawer-1 cns-ads-slot-state-empty" data-name="nav_drawer_1" data-slot-type="nav_drawer">
+                          <div class="cns-ads-flex-sizer"></div>
+                          <div id="nav_drawer_1" class="cns-ads-container" style="margin: 0px auto; box-sizing: content-box; height: 0px; width: 0px; min-width: 0px; min-height: 0px;" data-google-query-id="CPmZk8v_s_YCFZhBwgodvBsIQA">
+                            <div id="google_ads_iframe_3379/conde.wired.cm/nav-drawer/homepage/bundle/2_0__container__" style="border: 0pt none; margin: auto; text-align: center; width: 80px; height: 0px;"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="journey-unit"></div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <nav aria-label="Secondary" class="NavigationWrapper-cfzTvg fpuNqo SecondaryMenuSecondaryLinks-kQRCut hAAyfq drawer__navigation--secondary" data-testid="navigation">
+                <ul class="NavigationListWrapper-iOfHJS bAnqVu navigation__list" data-testid="navigation__list">
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="/search" data-testid="navigation__internal-link">Search</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="/auth/initiate" data-testid="navigation__internal-link">Sign in</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/v2/offers/wir214?redirectURL=https%3A%2F%2Fwww.wired.com%2Fcoupons" data-testid="navigation__internal-link">SUBSCRIBE</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://subscribe.wired.com/subscribe/splits/wired/WIR_GIFT?source=WIR_Actives_Gift" data-testid="navigation__internal-link">Give a Gift</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="/podcasts/" data-testid="navigation__internal-link">Podcasts</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="/video/" data-testid="navigation__internal-link">Video</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/newsletter" data-testid="navigation__internal-link">Newsletters</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/magazine" data-testid="navigation__internal-link">Magazine</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/tag/wired-events/" data-testid="navigation__internal-link">Events</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="/category/wiredinsider/" data-testid="navigation__internal-link">WIRED Insider</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="/tag/wired-consulting/" data-testid="navigation__internal-link">WIRED Consulting</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://jobs.wired.com/?source=navbar" data-testid="navigation__internal-link">Jobs</a>
+                  </li>
+                  <li class="BaseWrap-sc-TURhJ NavigationListItemWrapper-bfHMIL eTiIvU eHxHZj navigation__list-item" data-testid="navigation__list-item">
+                    <a class="NavigationInternalLink-eJHyE hgjcc navigation__link" href="https://www.wired.com/coupons" data-testid="navigation__internal-link">Coupons</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="BaseWrap-sc-TURhJ SocialIconsWrapper-ixWYBx eTiIvU eavmKn social-icons social-icons--standard SecondaryMenuSocialIcons-kidjuP gcInzt drawer__social-icons" data-event-boundary="click" data-event-click="{&quot;pattern&quot;:&quot;SocialIcons&quot;}" data-in-view="{&quot;pattern&quot;:&quot;SocialIcons&quot;}" data-include-experiments="true">
+              <ul class="SocialIconsList-NTOMk kKiupF social-icons__list">
+                <li class="SocialIconsListItem-hYmGVl ijYSfG social-icons__list-item social-icons__list-item--facebook social-icons__list-item--standard">
+                  <a aria-label="Follow us on Facebook" class="external-link SocialIconExternalLink-gugldc gNJiEi social-icons__link social-icons__link--facebook" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://www.facebook.com/wired/&quot;}" href="https://www.facebook.com/wired/" rel="nofollow noopener" target="_blank">
+                    <div class="BaseWrap-sc-TURhJ SocialIconContainer-fbhAuK eTiIvU epAnBp social-icons__icon-container">
+                      <svg class="icon icon-facebook" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Facebook</title>
+                        <path d="M13.621 11.099V13.302H12V15.995H13.621V24H16.951V15.995H19.186C19.186 15.995 19.395 14.704 19.496 13.292H16.964V11.45C16.964 11.175 17.327 10.804 17.686 10.804H19.5V8H17.033C13.539 8 13.621 10.696 13.621 11.099Z" fill="black"></path>
+                      </svg>
+                    </div>
+                  </a></li>
+                <li class="SocialIconsListItem-hYmGVl ijYSfG social-icons__list-item social-icons__list-item--twitter social-icons__list-item--standard">
+                  <a aria-label="Follow us on Twitter" class="external-link SocialIconExternalLink-gugldc gNJiEi social-icons__link social-icons__link--twitter" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://twitter.com/wired/&quot;}" href="https://twitter.com/wired/" rel="nofollow noopener" target="_blank">
+                    <div class="BaseWrap-sc-TURhJ SocialIconContainer-fbhAuK eTiIvU epAnBp social-icons__icon-container">
+                      <svg class="SocialIconNetworkIconComponent-cZaKGz dlOAhZ icon icon-twitter" focusable="false" width="30" height="30" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 45%; height: 45%;"><title>X</title><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="black"></path></svg>
+                    </div>
+                  </a></li>
+                <li class="SocialIconsListItem-hYmGVl ijYSfG social-icons__list-item social-icons__list-item--pinterest social-icons__list-item--standard">
+                  <a aria-label="Follow us on Pinterest" data-pin-do="nothing" class="external-link SocialIconExternalLink-gugldc gNJiEi social-icons__link social-icons__link--pinterest" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://pinterest.com/wired/&quot;}" href="https://pinterest.com/wired/" rel="nofollow noopener" target="_blank">
+                    <div class="BaseWrap-sc-TURhJ SocialIconContainer-fbhAuK eTiIvU epAnBp social-icons__icon-container">
+                      <svg class="icon icon-pinterest" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Pinterest</title>
+                        <path d="M15.169 18.448C14.793 20.093 14.425 21.678 13.623 22.928C13.377 23.311 13.13 23.793 12.71 24C12.09 20.807 13.387 18.12 13.899 15.436C13.246 14.103 13.652 11.846 15.051 11.59C17.077 11.22 16.543 13.664 16.2 14.8C16.01 15.424 15.671 16.021 15.722 16.705C15.835 18.146 17.648 18.24 18.577 17.497C19.909 16.436 20.295 14.385 20.164 12.7C19.967 10.135 17.062 8.85997 14.496 9.88497C13.173 10.413 11.973 11.628 11.799 13.413C11.709 14.353 11.906 15.104 12.276 15.634C12.331 15.715 12.523 15.857 12.552 16.072C12.61 16.506 12.352 16.974 12.116 17.298C10.802 16.92 10.124 15.741 10.016 14.248C9.76596 10.848 12.558 8.26397 15.841 8.02197C19.348 7.76497 22.126 9.78896 22.384 12.74C22.576 14.933 21.797 17.14 20.561 18.329C19.631 19.221 17.656 20.096 16.041 19.242C15.684 19.052 15.524 18.82 15.169 18.448Z" fill="black"></path>
+                      </svg>
+                    </div>
+                  </a></li>
+                <li class="SocialIconsListItem-hYmGVl ijYSfG social-icons__list-item social-icons__list-item--youtube social-icons__list-item--standard">
+                  <a aria-label="Follow us on YouTube" class="external-link SocialIconExternalLink-gugldc gNJiEi social-icons__link social-icons__link--youtube" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://www.youtube.com/user/wired/&quot;}" href="https://www.youtube.com/user/wired/" rel="nofollow noopener" target="_blank">
+                    <div class="BaseWrap-sc-TURhJ SocialIconContainer-fbhAuK eTiIvU epAnBp social-icons__icon-container">
+                      <svg class="icon icon-youtube" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>YouTube</title>
+                        <path d="M23.666 11.76C23.5755 11.4196 23.3971 11.109 23.1488 10.8593C22.9005 10.6095 22.5909 10.4294 22.251 10.337C21.003 10 16 10 16 10C16 10 10.997 10 9.749 10.337C9.40915 10.4294 9.09955 10.6095 8.85121 10.8593C8.60287 11.109 8.42451 11.4196 8.334 11.76C8 13.016 8 15.636 8 15.636C8 15.636 8 18.256 8.334 19.512C8.42436 19.8526 8.60265 20.1634 8.851 20.4133C9.09934 20.6632 9.40903 20.8435 9.749 20.936C10.997 21.273 16 21.273 16 21.273C16 21.273 21.003 21.273 22.251 20.936C22.591 20.8435 22.9007 20.6632 23.149 20.4133C23.3974 20.1634 23.5756 19.8526 23.666 19.512C24 18.257 24 15.636 24 15.636C24 15.636 24 13.016 23.666 11.76ZM14.364 18.015V13.257L18.545 15.637L14.364 18.015Z" fill="black"></path>
+                      </svg>
+                    </div>
+                  </a></li>
+                <li class="SocialIconsListItem-hYmGVl ijYSfG social-icons__list-item social-icons__list-item--instagram social-icons__list-item--standard">
+                  <a aria-label="Follow us on Instagram" class="external-link SocialIconExternalLink-gugldc gNJiEi social-icons__link social-icons__link--instagram" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://instagram.com/wired/&quot;}" href="https://instagram.com/wired/" rel="nofollow noopener" target="_blank">
+                    <div class="BaseWrap-sc-TURhJ SocialIconContainer-fbhAuK eTiIvU epAnBp social-icons__icon-container">
+                      <svg class="icon icon-instagram" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Instagram</title>
+                        <path d="M16 8C18.173 8 18.445 8.01 19.298 8.048C20.15 8.087 20.731 8.222 21.24 8.42C21.766 8.624 22.213 8.898 22.657 9.343C23.102 9.787 23.376 10.233 23.58 10.76C23.778 11.269 23.913 11.85 23.952 12.702C23.991 13.555 24 13.827 24 16C24 18.173 23.99 18.445 23.952 19.298C23.913 20.15 23.778 20.731 23.58 21.24C23.379 21.7738 23.064 22.2574 22.657 22.657C22.213 23.102 21.767 23.376 21.24 23.58C20.731 23.778 20.15 23.913 19.298 23.952C18.445 23.991 18.173 24 16 24C13.827 24 13.555 23.99 12.702 23.952C11.85 23.913 11.269 23.778 10.76 23.58C10.2262 23.379 9.74259 23.064 9.343 22.657C8.93593 22.2574 8.62093 21.7738 8.42 21.24C8.222 20.731 8.087 20.15 8.048 19.298C8.01 18.445 8 18.173 8 16C8 13.827 8.01 13.555 8.048 12.702C8.087 11.85 8.222 11.269 8.42 10.76C8.624 10.234 8.898 9.787 9.343 9.343C9.787 8.898 10.233 8.624 10.76 8.42C11.269 8.222 11.85 8.087 12.702 8.048C13.555 8.01 13.827 8 16 8ZM16 10C14.046 10 13.814 10.007 13.043 10.043C12.329 10.075 11.942 10.194 11.683 10.295C11.3657 10.4124 11.0787 10.5993 10.843 10.842C10.586 11.098 10.427 11.342 10.295 11.684C10.195 11.942 10.075 12.329 10.043 13.043C10.007 13.814 10 14.046 10 16C10 17.954 10.007 18.186 10.043 18.957C10.075 19.671 10.194 20.058 10.295 20.317C10.427 20.658 10.586 20.902 10.842 21.157C11.098 21.414 11.342 21.573 11.684 21.705C11.942 21.805 12.329 21.925 13.043 21.957C13.814 21.993 14.046 22 16 22C17.954 22 18.186 21.993 18.957 21.957C19.671 21.925 20.058 21.806 20.317 21.705C20.658 21.573 20.902 21.414 21.157 21.158C21.414 20.902 21.573 20.658 21.705 20.316C21.805 20.058 21.925 19.671 21.957 18.957C21.993 18.186 22 17.954 22 16C22 14.046 21.993 13.814 21.957 13.043C21.925 12.329 21.806 11.942 21.705 11.683C21.5876 11.3657 21.4007 11.0787 21.158 10.843C20.9219 10.5997 20.6341 10.4124 20.316 10.295C20.058 10.195 19.671 10.075 18.957 10.043C18.186 10.007 17.954 10 16 10ZM16 11.768C16.5558 11.768 17.1061 11.8775 17.6195 12.0901C18.133 12.3028 18.5995 12.6145 18.9925 13.0075C19.3855 13.4005 19.6972 13.867 19.9099 14.3805C20.1225 14.8939 20.232 15.4442 20.232 16C20.232 16.5558 20.1225 17.1061 19.9099 17.6195C19.6972 18.133 19.3855 18.5995 18.9925 18.9925C18.5995 19.3855 18.133 19.6972 17.6195 19.9099C17.1061 20.1225 16.5558 20.232 16 20.232C14.8776 20.232 13.8012 19.7861 13.0075 18.9925C12.2139 18.1988 11.768 17.1224 11.768 16C11.768 14.8776 12.2139 13.8012 13.0075 13.0075C13.8012 12.2139 14.8776 11.768 16 11.768ZM16 18.368C16.628 18.368 17.2303 18.1185 17.6744 17.6744C18.1185 17.2303 18.368 16.628 18.368 16C18.368 15.372 18.1185 14.7697 17.6744 14.3256C17.2303 13.8815 16.628 13.632 16 13.632C15.372 13.632 14.7697 13.8815 14.3256 14.3256C13.8815 14.7697 13.632 15.372 13.632 16C13.632 16.628 13.8815 17.2303 14.3256 17.6744C14.7697 18.1185 15.372 18.368 16 18.368ZM21.3 11.85C21.3 12.155 21.1788 12.4475 20.9632 12.6632C20.7475 12.8788 20.455 13 20.15 13C19.845 13 19.5525 12.8788 19.3368 12.6632C19.1212 12.4475 19 12.155 19 11.85C19 11.545 19.1212 11.2525 19.3368 11.0368C19.5525 10.8212 19.845 10.7 20.15 10.7C20.455 10.7 20.7475 10.8212 20.9632 11.0368C21.1788 11.2525 21.3 11.545 21.3 11.85Z" fill="black"></path>
+                      </svg>
+                    </div>
+                  </a></li>
+                <li class="SocialIconsListItem-hYmGVl ijYSfG social-icons__list-item social-icons__list-item--tiktok social-icons__list-item--standard">
+                  <a aria-label="Follow us on TikTok" class="external-link SocialIconExternalLink-gugldc gNJiEi social-icons__link social-icons__link--tiktok" data-event-click="{&quot;element&quot;:&quot;ExternalLink&quot;,&quot;outgoingURL&quot;:&quot;https://www.tiktok.com/@wired?lang=en&quot;}" href="https://www.tiktok.com/@wired?lang=en" rel="nofollow noopener" target="_blank">
+                    <div class="BaseWrap-sc-TURhJ SocialIconContainer-fbhAuK eTiIvU epAnBp social-icons__icon-container">
+                      <svg class="icon icon-tiktok" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Tiktok</title>
+                        <path d="M22.6895 14.4733C22.5587 14.486 22.4275 14.4927 22.2961 14.4933C20.8554 14.4935 19.5115 13.7672 18.7223 12.5618V19.1388C18.7223 21.8235 16.546 24 13.8612 24C11.1764 24 9 21.8236 9 19.1388C9 16.454 11.1764 14.2777 13.8612 14.2777C13.9626 14.2777 14.0619 14.2868 14.1616 14.293V16.6887C14.0619 16.6767 13.9638 16.6584 13.8612 16.6584C12.4909 16.6584 11.3802 17.7692 11.3802 19.1394C11.3802 20.5097 12.4909 21.6204 13.8612 21.6204C15.2317 21.6204 16.4419 20.5407 16.4419 19.1703L16.4659 8H18.7576C18.9737 10.0552 20.6308 11.6603 22.6918 11.811V14.4733" fill="black"></path>
+                      </svg>
+                    </div>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="topbar" role="banner" data-area="HD">
+
+  <div class="container">
+
+    <div class="row">
+
+      <a href="https://www.wired.com" class="topbar__logo" rel="" title="Wired">
+
+
+    <img alt="Wired" width="373" height="140" srcset="https://www.wired.com/coupons/static/image_setting/132/logo/wired_coupons_logo.png?width=746&amp;height=280&amp;quality=90 1x, https://www.wired.com/coupons/static/image_setting/132/logo/wired_coupons_logo.png?width=746&amp;height=280&amp;quality=90 2x" src="https://www.wired.com/coupons/static/image_setting/132/logo/wired_coupons_logo.png?width=373&amp;height=140&amp;quality=90">
+
+
+</a>
+
+
+    </div>
+
+  </div>
+
+</header>
+
+<nav class="m-navigation" role="navigation" data-area="SHD">
+
+  <div class="container">
+
+    <div class="row">
+
+      <ul class="m-navigation__list">
+
+
+
+
+
+
+
+
+          
+
+            <li class="m-navigation__item">
+
+              <a class="m-navigation__link m-navigation__link--home" href="https://www.wired.com/coupons" tabindex="0"></a>
+
+            </li>
+
+
+
+
+
+          
+          <li class="m-navigation__item has-sub-menu ">
+
+
+            <a class="m-navigation__link" href="https://www.wired.com/coupons/stores" tabindex="0">
+
+              Top shops
+
+
+              <i class="m-navigation__chevron m-navigation__chevron--down">
+
+                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                  <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683418 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM4 4L3.29289 4.70711C3.48043 4.89464 3.73478 5 4 5C4.26522 5 4.51957 4.89464 4.70711 4.70711L4 4ZM7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L7.70711 1.70711ZM0.292893 1.70711L3.29289 4.70711L4.70711 3.29289L1.70711 0.292893L0.292893 1.70711ZM4.70711 4.70711L7.70711 1.70711L6.29289 0.292893L3.29289 3.29289L4.70711 4.70711Z" fill="#1BAFCD"></path>
+
+                </svg>
+
+              </i>
+
+            </a>
+
+
+              <div class="sub-menu" data-event-category="header">
+
+                <ul class="sub-menu__list">
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/adidas">adidas</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/aliexpress">AliExpress</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/best-buy">Best Buy</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/booking-com">Booking.com</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/chewy">Chewy</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/dell">Dell</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/doordash">DoorDash</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/dsw">DSW</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/dyson">Dyson</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/expedia">Expedia</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/gamestop">GameStop</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/gopro">GoPro</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/groupon">Groupon</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/hr-block">H&amp;R Block Tax</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/home-chef">Home Chef</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/instacart">Instacart</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/lowes">Lowe's</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/macys">Macy's</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/meta-quest">Meta Quest</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/nike">Nike</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/nordvpn">NordVPN</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/office-depot-officemax">Office Depot &amp; OfficeMax</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/overstock">Overstock</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/peacock-tv">Peacock TV</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/philo">Philo</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/priceline">Priceline</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/samsung">Samsung</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/shein">SHEIN</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/motley-fool">The Motley Fool</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/turbotax">TurboTax</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/walmart">Walmart</a>
+
+
+                    </li>
+
+
+                    <li class="sub-menu__item">
+
+
+                      <a class="sub-menu__link" tabindex="0" href="https://www.wired.com/coupons/wayfair">Wayfair</a>
+
+
+                    </li>
+
+
+                  <li class="sub-menu__item sub-menu__item--see-all">
+
+                    <a class="sub-menu__link" href="https://www.wired.com/coupons/stores">
+
+                      Explore all shops
+
+
+                    </a>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+          </li>
+
+
+
+
+          
+
+            <li class="m-navigation__item m-navigation__item--top-coupons  ">
+
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/best-coupons-and-deals">Top coupons</a>
+
+
+            </li>
+
+
+
+
+
+          
+
+            <li class="m-navigation__item has-sub-menu__categories active">
+
+
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/categories">
+
+                Top categories
+
+
+                  <i class="m-navigation__chevron m-navigation__chevron--down">
+
+                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                      <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683418 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM4 4L3.29289 4.70711C3.48043 4.89464 3.73478 5 4 5C4.26522 5 4.51957 4.89464 4.70711 4.70711L4 4ZM7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L7.70711 1.70711ZM0.292893 1.70711L3.29289 4.70711L4.70711 3.29289L1.70711 0.292893L0.292893 1.70711ZM4.70711 4.70711L7.70711 1.70711L6.29289 0.292893L3.29289 3.29289L4.70711 4.70711Z" fill="#1BAFCD"></path>
+
+                    </svg>
+
+                  </i>
+
+
+              </a>
+
+
+                <div class="sub-menu">
+
+                  <ul class="sub-menu__list">
+
+
+                      <li class="sub-menu__item">
+
+
+                        <a class="sub-menu__link" href="https://www.wired.com/coupons/categories/department-stores">Department Stores</a>
+
+
+                      </li>
+
+
+                      <li class="sub-menu__item">
+
+
+                        <a class="sub-menu__link" href="https://www.wired.com/coupons/categories/tech-electronics">Tech &amp; Electronics</a>
+
+
+                      </li>
+
+
+                      <li class="sub-menu__item">
+
+
+                        <a class="sub-menu__link" href="https://www.wired.com/coupons/categories/hobby-lifestyle">Hobby &amp; Lifestyle</a>
+
+
+                      </li>
+
+
+                      <li class="sub-menu__item">
+
+
+                        <a class="sub-menu__link" href="https://www.wired.com/coupons/categories/home-garden">Home &amp; Garden</a>
+
+
+                      </li>
+
+
+                      <li class="sub-menu__item">
+
+
+                        <a class="sub-menu__link" href="https://www.wired.com/coupons/categories/sports-outdoor">Sports &amp; Outdoors</a>
+
+
+                      </li>
+
+
+                      <li class="sub-menu__item">
+
+
+                        <a class="sub-menu__link" href="https://www.wired.com/coupons/categories/internet-streaming">Internet &amp; Streaming</a>
+
+
+                      </li>
+
+
+                    <li class="sub-menu__item sub-menu__item--see-all">
+
+                      <a class="sub-menu__link" href="https://www.wired.com/coupons/categories">
+
+                        See all categories
+
+                      </a>
+
+                    </li>
+
+                  </ul>
+
+                </div>
+
+
+            </li>
+
+
+
+
+
+          
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/walmart">Walmart</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/samsung">Samsung</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/doordash">DoorDash</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/dyson">Dyson</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/booking-com">Booking.com</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/instacart">Instacart</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/priceline">Priceline</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/expedia">Expedia</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/wayfair">Wayfair</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/groupon">Groupon</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/hotels-com">Hotels.com</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/ubereats">Uber Eats</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/adidas">adidas</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/shein">SHEIN</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/aliexpress">AliExpress</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/valvoline">Valvoline</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/motley-fool">The Motley Fool</a>
+
+
+            </li>
+
+
+
+            <li class="m-navigation__item ">
+
+              <a class="m-navigation__link" href="https://www.wired.com/coupons/chewy">Chewy</a>
+
+
+            </li>
+
+
+
+
+
+          
+
+
+
+
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <span class="m-navigation__arrow m-navigation__arrow--left" style="display: none;">
+
+    <i class="icon-chevron-right"></i>
+
+  </span>
+
+  <span class="m-navigation__arrow m-navigation__arrow--right" style="display: none;">
+
+    <i class="icon-chevron-right"></i>
+
+  </span>
+
+</nav>
+
+
+
+
+
+  <div class="sub-nav-bar" role="navigation" aria-label="Breadcrumb" data-area="SHD">
+
+    <div class="container">
+
+      <div class="row align-items-center search-container">
+
+        <div class="col-10 col-lg-9">
+
+          <div class="breadcrumbs">
+
+
+    <ol class="breadcrumbs__list" data-event-category="breadcrumb">
+
+
+
+          <li class="breadcrumbs__item breadcrumbs__item--partner">
+
+            <a href="https://www.wired.com">
+
+                <span>
+
+
+                    <i class="icon-house" aria-label="Wired.com" title="Wired.com" role="link"></i>
+
+
+                </span>
+
+            </a>
+
+
+          </li>
+
+
+
+
+          <li class="breadcrumbs__item ">
+
+            <a href="https://www.wired.com/coupons">
+
+                <span>
+
+
+                    WIRED coupons
+
+
+                </span>
+
+            </a>
+
+
+          </li>
+
+
+
+
+          <li class="breadcrumbs__item breadcrumbs__item--active">
+
+            <span>Categories</span>
+
+
+          </li>
+
+
+
+    </ol>
+
+
+</div>
+
+
+        </div>
+
+        <div class="col-2 col-lg-3">
+
+            <div class="search-header">
+
+  <form action="/coupons/search" class="m-search-box__form m-search-box__form--small" data-widget="search" data-search-result-selector="#search-header-results" role="search">
+
+    <div class="m-search-box__input-wrp">
+
+      <input autocomplete="off" class="m-search-box__input" data-autocomplete-url="/coupons/searches/shop_autocomplete" data-search-input="" data-active="m-search-box__input--opened" id="input_search_header" name="query" placeholder="Browse coupons" required="" type="search" aria-label="Browse coupons">
+
+    </div>
+
+    <button class="m-search-box__submit" data-search-submit="" data-active="m-search-box__submit--opened" type="submit" role="button" aria-label="Search">
+
+      <i class="icon-lens"></i>
+
+    </button>
+
+  </form>
+
+</div>
+
+
+
+        </div>
+
+        <div class="col-12 col-lg-3 offset-lg-9">
+
+          <div class="hidden search-header-results search-header-results--small" data-search-result="" data-active="m-search-box__input--opened" id="search-header-results" data-area="SE"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  
+
+  <div class="container main-content">
+
+    <div class="row">
+
+      <div class="col">
+
+        
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-12" id="content" role="main" data-area="MB">
+
+        <h1 class="page-title">Find the best coupon by category</h1>
+
+<h2 class="page-subtitle">Find the best offers by product or brand</h2>
+
+
+  <div class="categories">
+
+    <ul class="categories__list row justify-content-center ">
+
+
+
+
+        <li class="categories__item col-md-3 col-sm-6 col-xs-6">
+
+          <a href="/coupons/categories/department-stores" class="categories__link">
+
+
+              <i class="categories__icon roberto roberto-category-department-store"></i>
+
+
+            <span class="categories__name">
+
+              Department Stores
+
+            </span>
+
+          </a>
+
+        </li>
+
+
+
+
+        <li class="categories__item col-md-3 col-sm-6 col-xs-6">
+
+          <a href="/coupons/categories/hobby-lifestyle" class="categories__link">
+
+
+              <i class="categories__icon roberto roberto-category-hobby"></i>
+
+
+            <span class="categories__name">
+
+              Hobby &amp; Lifestyle
+
+            </span>
+
+          </a>
+
+        </li>
+
+
+
+
+        <li class="categories__item col-md-3 col-sm-6 col-xs-6">
+
+          <a href="/coupons/categories/home-garden" class="categories__link">
+
+
+              <i class="categories__icon roberto roberto-category-home"></i>
+
+
+            <span class="categories__name">
+
+              Home &amp; Garden
+
+            </span>
+
+          </a>
+
+        </li>
+
+
+
+
+        <li class="categories__item col-md-3 col-sm-6 col-xs-6">
+
+          <a href="/coupons/categories/internet-streaming" class="categories__link">
+
+
+              <i class="categories__icon roberto roberto-category-internet"></i>
+
+
+            <span class="categories__name">
+
+              Internet &amp; Streaming
+
+            </span>
+
+          </a>
+
+        </li>
+
+
+
+
+        <li class="categories__item col-md-3 col-sm-6 col-xs-6">
+
+          <a href="/coupons/categories/sports-outdoor" class="categories__link">
+
+
+              <i class="categories__icon roberto roberto-category-sport"></i>
+
+
+            <span class="categories__name">
+
+              Sports &amp; Outdoors
+
+            </span>
+
+          </a>
+
+        </li>
+
+
+
+
+        <li class="categories__item col-md-3 col-sm-6 col-xs-6">
+
+          <a href="/coupons/categories/tech-electronics" class="categories__link">
+
+
+              <i class="categories__icon roberto roberto-category-technology"></i>
+
+
+            <span class="categories__name">
+
+              Tech &amp; Electronics
+
+            </span>
+
+          </a>
+
+        </li>
+
+
+    </ul>
+
+  </div>
+
+  <div class="col-md-8 offset-md-2 categories__seo-text-wrapper">
+
+    <div class="categories__seo-text">
+
+      <i class="icon-info categories__seo-icon"></i>
+
+      <p>Search for the latest coupons in all your favorite categories. Here you will find verified coupon codes in categories such as department stores, hobby and lifestyle, home and garden, sports and outdoors, and tech and electronics. Once you find the category you want, you can find the best promo code to be applied to your next online purchase. Find site-wide discounts and even buy one, get one free deals from the biggest stores on best-selling products. Click on the category that best suits your needs and apply the top promotion at checkout. Visit all the category pages to browse through a wide range of top coupons, promo codes, and offers.</p>
+
+    </div>
+
+  </div>
+
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+    
+<footer class="footer" id="footer" role="contentinfo" data-event-category="footer" aria-label="Footer" data-area="FO">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-4">
+
+        <div class="f-widget f-widget--one">
+
+
+            <div class="f-widget__header">
+
+              <h3 class="f-widget__title">Contact Us</h3>
+
+            </div>
+
+            <div class="f-widget__content">
+
+              <ul class="f-widget__list">
+
+
+                  <li class="f-widget__item">
+
+                    <a href="/coupons/submit-offer">Submit an Offer</a>
+
+                  </li>
+
+
+
+                <li class="f-widget__item">
+
+                  <a href="/coupons/business-partners">Become a Partner</a>
+
+                </li>
+
+
+
+                <li class="f-widget__item">
+
+                  <a href="/coupons/contact">Contact Us</a>
+
+                </li>
+
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-8">
+
+        <div class="f-widget">
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+</footer>
+
+
+
+<div class="BaseWrap-sc-gjQpdd RowWrapper-UmqTg iUEiRd HEhan BasePageSiteFooterRow-kpEBGH jqlJed" data-footer="">
+  <div class="GridWrapper-cAzTTK eRggVV grid grid-margins grid-items-0 BasePageSiteFooterRowGrid-iBGjXL zQNeb">
+    <div class="GridItem-buujkM kHPPIF grid--item">
+      <footer class="SiteFooterWrapper-bXjkRY jXecHG site-footer--with-store">
+        <div class="SiteFooterGridNoMargins-jSrXSj cQgGDp">
+          <div class="SiteFooterBrandInfo-cdoqKy cdkwFG">
+            <div class="SiteFooterLogo-eYlNHY eigdAF site-footer__logo">
+              <a href="https://www.wired.com/"><span class="SpanWrapper-umhxW jvZaPI responsive-asset SiteFooterLogoResponsiveAsset-ckjzWk kubVDn site-footer__responsive-image"><picture class="ResponsiveImagePicture-cWuUZO dUOtEa SiteFooterLogoResponsiveAsset-ckjzWk kubVDn site-footer__responsive-image responsive-image"><img alt="WIRED" class="ResponsiveImageContainer-eybHBd fptoWY responsive-image__image" src="https://www.wired.com/verso/static/wired/assets/logo-reverse.svg" srcset="" sizes="100vw"></picture></span></a></div>
+            <div class="SiteFooterAbout-lflfWa isidEN">
+              <div class="SiteFooterAboutText-XXKBX blTbmF">WIRED is where tomorrow is realized. It is the essential
+                source of information and ideas that make sense of a world in constant transformation. The WIRED
+                conversation illuminates how technology is changing every aspect of our lives—from culture to business,
+                science to design. The breakthroughs and innovations that we uncover lead to new ways of thinking, new
+                connections, and new industries.
+              </div>
+            </div>
+          </div>
+          <nav aria-label="More From WIRED" class="NavigationWrapper-bFftAs fKSZRK SiteFooterNavigationVertical-eawNCf MrFvm">
+            <p class="NavigationHeadingWrapper-befTuI kSFYXD navigation__heading">More From
+              WIRED</p>
+            <ul class="NavigationListWrapper-gWXLVS huuvUn navigation__list">
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/subscribe/">Subscribe</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/newsletter?sourceCode=HeaderAndFooter">Newsletters</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/about/faq/">FAQ</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/wired-staff/">WIRED
+                  Staff</a></li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/about/wired-on-background-policy/">Editorial Standards</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://archive.wired.com/t/storefront/storefront">Archive</a></li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/about/rss-feeds/">RSS</a></li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/about/accessibility-help/">Accessibility Help</a>
+              </li>
+            </ul>
+          </nav>
+          <span class="NavigationDivider-fEDnwq ixXXMs navigation__divider"></span>
+          <nav aria-label="Reviews and Guides" class="NavigationWrapper-bFftAs fKSZRK SiteFooterNavigationContactVertical-kReQvb gEsqjT"><p class="NavigationHeadingWrapper-befTuI kSFYXD navigation__heading">Reviews
+            and Guides</p>
+            <ul class="NavigationListWrapper-gWXLVS huuvUn navigation__list">
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/category/gear/reviews/">Reviews</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/category/gear/buying-guides/">Buying Guides</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/gallery/best-mattresses/">Mattresses</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/gallery/best-electric-bikes/">Electric Bikes</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/gallery/best-fitness-tracker/">Fitness Trackers</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/tag/culture-guides/">Streaming Guides</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/coupons">Coupons</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/coupons/submit-offer">Submit an Offer</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/coupons/business-partners">Become a Partner</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/coupons/contact">Coupons Contact</a>
+              </li>
+              <li class="NavigationListItemWrapper-cxLZKD JsNkg navigation__list-item">
+                <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/coupons/info/code-guarantee.html">Code Guarantee</a>
+              </li>
+            </ul>
+          </nav>
+          <span class="NavigationDivider-fEDnwq ixXXMs navigation__divider"></span>
+          <div class="SiteFooterNoticesWrapper-gbuTHd dWMZHg">
+            <div class="SiteFooterNoticesContainerWrapper-cQMYXm jYCnSe">
+              <nav aria-label="Notices" class="NavigationWrapper-bFftAs fKSZRK SiteFooterNavigationHorizontal-cWLRMH grpbGX">
+                <ul class="NavigationListWrapper-gWXLVS eMPBBw navigation__list">
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.condenast.com/brands/wired">Advertise</a></li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/about/feedback/">Contact Us</a></li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://subscriptions.wired.com/pubs/N3/WIR/Register.jsp?cds_page_id=175371&amp;cds_mag_code=WIR&amp;id=1423757547774&amp;lsid=50431012277019467&amp;vid=1">Customer
+                      Care</a>
+                  </li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/about/wired-jobs/">Jobs</a></li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a role="link" class="NavigationInternalLink-cWEaeo knabMb navigation__link" href="https://www.wired.com/about/press/">Press Center</a>
+                  </li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a class="external-link NavigationExternalLink-hktPkS jLQUSr navigation__link" href="https://www.condenaststore.com/" target="_blank">Condé Nast Store</a></li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a class="external-link NavigationExternalLink-hktPkS jLQUSr navigation__link" href="https://www.condenast.com/user-agreement/" rel="nofollow" target="_blank">User Agreement</a></li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a class="external-link NavigationExternalLink-hktPkS jLQUSr navigation__link" href="http://www.condenast.com/privacy-policy#privacypolicy" rel="nofollow" target="_blank">Privacy Policy &amp; Cookie Statement</a></li>
+                  <li class="NavigationListItemWrapper-cxLZKD dsgTQs navigation__list-item">
+                    <a class="external-link NavigationExternalLink-hktPkS jLQUSr navigation__link" href="http://www.condenast.com/privacy-policy#privacypolicy-california" rel="nofollow" target="_blank">Your California Privacy Rights</a></li>
+                </ul>
+              </nav>
+              <span class="NavigationDivider-fEDnwq ixXXMs navigation__divider"></span>
+              <div class="SiteFooterLegaleseTextWrapper-fGMwRh eSpvgx">
+                <p class="SiteFooterLegaleseText-bquxSW cpEgGF">©
+                  2024 Condé Nast. All rights reserved. <em>WIRED</em> may earn a portion of sales from products
+                  that are purchased through our site as part of our Affiliate Partnerships with retailers. The material
+                  on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with
+                  the prior written permission of Condé Nast. <a class="external-link" href="http://www.aboutads.info" rel="noopener" target="_blank">Ad Choices</a></p></div>
+              <div class="SiteFooterCollectionContainer-iKPzYu cUTUWM">
+                <div class="NavigationDropdownWrapper-fjoVXT jYntAR SiteFooterNavigationDropdown-hjTqZW bWWMsL">
+                  <h6 id="assistive-label-site-footer-dropdown" class="AssistiveText-jDgocZ dpxJYg">Select international
+                    site</h6>
+                  <button aria-expanded="false" aria-haspopup="true" aria-labelledby="assistive-label-site-footer-dropdown" aria-describedby="assistive-label-site-footer-dropdown menu-button-site-footer-dropdown" id="menu-button-site-footer-dropdown" role="button" class="BaseWrap-sc-gjQpdd BaseText-ewhhUZ BaseLink-eNWuiM NavigationDropdownLink-wQNwA NavigationDropdownButton-dMMEVi iUEiRd kZoQA-D emJbZH cxfUYn gUwJJm">
+                    <span>United States</span><span aria-hidden="true"><svg class="icon icon-large-chevron" focusable="false" width="12" height="7" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><title>LargeChevron</title><g clip-path="url(#clip0)"><path d="M0.878063 2.70837L5.00158 6.95743L9.13961 2.70837L9.3574 2.84693L5.00158 7.32691L0.645752 2.84693L0.878063 2.70837Z" stroke="#1E1E1E"></path></g><defs><clipPath id="clip0"><rect width="10" height="10" fill="white"></rect></clipPath></defs></svg></span>
+                  </button>
+                  <ul direction="up" role="menu" aria-labelledby="assistive-label-site-footer-dropdown" class="NavigationDropdownListWrapper-hCCdPp bIcEJD">
+                    <li role="none" class="NavigationDropdownListItem-fOdiCf fEcOYZ">
+                      <a href="https://www.wired.it/" role="menuitem" class="BaseWrap-sc-gjQpdd BaseText-ewhhUZ BaseLink-eNWuiM NavigationDropdownLink-wQNwA iUEiRd kZoQA-D cqXXCp cxfUYn">Italia</a>
+                    </li>
+                    <li role="none" class="NavigationDropdownListItem-fOdiCf fEcOYZ">
+                      <a href="https://wired.jp/" role="menuitem" class="BaseWrap-sc-gjQpdd BaseText-ewhhUZ BaseLink-eNWuiM NavigationDropdownLink-wQNwA iUEiRd kZoQA-D cqXXCp cxfUYn">Japón</a>
+                    </li>
+                    <li role="none" class="NavigationDropdownListItem-fOdiCf fEcOYZ">
+                      <a href="https://www.wired.cz/" role="menuitem" class="BaseWrap-sc-gjQpdd BaseText-ewhhUZ BaseLink-eNWuiM NavigationDropdownLink-wQNwA iUEiRd kZoQA-D cqXXCp cxfUYn">Czech
+                        Republic &amp; Slovakia</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="SocialIconsWrapper-hKMEXV hwdgCG social-icons social-icons--footer SiteFooterSocialIcons-cLAKVY cPpkaJ">
+                <ul class="SocialIconsList-cHVTIA gBoIvv social-icons__list">
+                  <li class="SocialIconsListItem-dembhR gQILrJ social-icons__list-item social-icons__list-item--facebook social-icons__list-item--footer">
+                    <a aria-label="Follow us on Facebook" class="external-link SocialIconExternalLink-huuzOU vUgCi social-icons__link social-icons__link--facebook" href="https://www.facebook.com/wired/" rel=" noopener" target="_blank">
+                      <div class="SocialIconContainer-huXzUC pMzVC social-icons__icon-container">
+                        <svg class="SocialIconNetworkIconComponent-cZaKGz dlOAhZ icon icon-facebook" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title>
+                          <path d="M13.621 11.099V13.302H12V15.995H13.621V24H16.951V15.995H19.186C19.186 15.995 19.395 14.704 19.496 13.292H16.964V11.45C16.964 11.175 17.327 10.804 17.686 10.804H19.5V8H17.033C13.539 8 13.621 10.696 13.621 11.099Z" fill="black"></path>
+                        </svg>
+                      </div>
+                    </a></li>
+                  <li class="SocialIconsListItem-dembhR gQILrJ social-icons__list-item social-icons__list-item--twitter social-icons__list-item--footer">
+                    <a aria-label="Follow us on X" class="external-link SocialIconExternalLink-huuzOU vUgCi social-icons__link social-icons__link--twitter" href="https://twitter.com/wired/" rel=" noopener" target="_blank">
+                      <div class="SocialIconContainer-huXzUC pMzVC social-icons__icon-container">
+                        <svg class="SocialIconNetworkIconComponent-cZaKGz dlOAhZ icon icon-twitter" focusable="false" width="30" height="30" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:45%;height:45%"><title>X</title>
+                          <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="black"></path>
+                        </svg>
+                      </div>
+                    </a></li>
+                  <li class="SocialIconsListItem-dembhR gQILrJ social-icons__list-item social-icons__list-item--pinterest social-icons__list-item--footer">
+                    <a aria-label="Follow us on Pinterest" class="external-link SocialIconExternalLink-huuzOU vUgCi social-icons__link social-icons__link--pinterest" href="https://pinterest.com/wired/" rel=" noopener" target="_blank">
+                      <div class="SocialIconContainer-huXzUC pMzVC social-icons__icon-container">
+                        <svg class="SocialIconNetworkIconComponent-cZaKGz dlOAhZ icon icon-pinterest" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Pinterest</title>
+                          <path d="M15.169 18.448C14.793 20.093 14.425 21.678 13.623 22.928C13.377 23.311 13.13 23.793 12.71 24C12.09 20.807 13.387 18.12 13.899 15.436C13.246 14.103 13.652 11.846 15.051 11.59C17.077 11.22 16.543 13.664 16.2 14.8C16.01 15.424 15.671 16.021 15.722 16.705C15.835 18.146 17.648 18.24 18.577 17.497C19.909 16.436 20.295 14.385 20.164 12.7C19.967 10.135 17.062 8.85997 14.496 9.88497C13.173 10.413 11.973 11.628 11.799 13.413C11.709 14.353 11.906 15.104 12.276 15.634C12.331 15.715 12.523 15.857 12.552 16.072C12.61 16.506 12.352 16.974 12.116 17.298C10.802 16.92 10.124 15.741 10.016 14.248C9.76596 10.848 12.558 8.26397 15.841 8.02197C19.348 7.76497 22.126 9.78896 22.384 12.74C22.576 14.933 21.797 17.14 20.561 18.329C19.631 19.221 17.656 20.096 16.041 19.242C15.684 19.052 15.524 18.82 15.169 18.448Z" fill="black"></path>
+                        </svg>
+                      </div>
+                    </a></li>
+                  <li class="SocialIconsListItem-dembhR gQILrJ social-icons__list-item social-icons__list-item--youtube social-icons__list-item--footer">
+                    <a aria-label="Follow us on YouTube" class="external-link SocialIconExternalLink-huuzOU vUgCi social-icons__link social-icons__link--youtube" href="https://www.youtube.com/user/wired/" rel=" noopener" target="_blank">
+                      <div class="SocialIconContainer-huXzUC pMzVC social-icons__icon-container">
+                        <svg class="SocialIconNetworkIconComponent-cZaKGz dlOAhZ icon icon-youtube" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title>
+                          <path d="M23.666 11.76C23.5755 11.4196 23.3971 11.109 23.1488 10.8593C22.9005 10.6095 22.5909 10.4294 22.251 10.337C21.003 10 16 10 16 10C16 10 10.997 10 9.749 10.337C9.40915 10.4294 9.09955 10.6095 8.85121 10.8593C8.60287 11.109 8.42451 11.4196 8.334 11.76C8 13.016 8 15.636 8 15.636C8 15.636 8 18.256 8.334 19.512C8.42436 19.8526 8.60265 20.1634 8.851 20.4133C9.09934 20.6632 9.40903 20.8435 9.749 20.936C10.997 21.273 16 21.273 16 21.273C16 21.273 21.003 21.273 22.251 20.936C22.591 20.8435 22.9007 20.6632 23.149 20.4133C23.3974 20.1634 23.5756 19.8526 23.666 19.512C24 18.257 24 15.636 24 15.636C24 15.636 24 13.016 23.666 11.76ZM14.364 18.015V13.257L18.545 15.637L14.364 18.015Z" fill="black"></path>
+                        </svg>
+                      </div>
+                    </a></li>
+                  <li class="SocialIconsListItem-dembhR gQILrJ social-icons__list-item social-icons__list-item--instagram social-icons__list-item--footer">
+                    <a aria-label="Follow us on Instagram" class="external-link SocialIconExternalLink-huuzOU vUgCi social-icons__link social-icons__link--instagram" href="https://instagram.com/wired/" rel=" noopener" target="_blank">
+                      <div class="SocialIconContainer-huXzUC pMzVC social-icons__icon-container">
+                        <svg class="SocialIconNetworkIconComponent-cZaKGz dlOAhZ icon icon-instagram" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title>
+                          <path d="M16 8C18.173 8 18.445 8.01 19.298 8.048C20.15 8.087 20.731 8.222 21.24 8.42C21.766 8.624 22.213 8.898 22.657 9.343C23.102 9.787 23.376 10.233 23.58 10.76C23.778 11.269 23.913 11.85 23.952 12.702C23.991 13.555 24 13.827 24 16C24 18.173 23.99 18.445 23.952 19.298C23.913 20.15 23.778 20.731 23.58 21.24C23.379 21.7738 23.064 22.2574 22.657 22.657C22.213 23.102 21.767 23.376 21.24 23.58C20.731 23.778 20.15 23.913 19.298 23.952C18.445 23.991 18.173 24 16 24C13.827 24 13.555 23.99 12.702 23.952C11.85 23.913 11.269 23.778 10.76 23.58C10.2262 23.379 9.74259 23.064 9.343 22.657C8.93593 22.2574 8.62093 21.7738 8.42 21.24C8.222 20.731 8.087 20.15 8.048 19.298C8.01 18.445 8 18.173 8 16C8 13.827 8.01 13.555 8.048 12.702C8.087 11.85 8.222 11.269 8.42 10.76C8.624 10.234 8.898 9.787 9.343 9.343C9.787 8.898 10.233 8.624 10.76 8.42C11.269 8.222 11.85 8.087 12.702 8.048C13.555 8.01 13.827 8 16 8ZM16 10C14.046 10 13.814 10.007 13.043 10.043C12.329 10.075 11.942 10.194 11.683 10.295C11.3657 10.4124 11.0787 10.5993 10.843 10.842C10.586 11.098 10.427 11.342 10.295 11.684C10.195 11.942 10.075 12.329 10.043 13.043C10.007 13.814 10 14.046 10 16C10 17.954 10.007 18.186 10.043 18.957C10.075 19.671 10.194 20.058 10.295 20.317C10.427 20.658 10.586 20.902 10.842 21.157C11.098 21.414 11.342 21.573 11.684 21.705C11.942 21.805 12.329 21.925 13.043 21.957C13.814 21.993 14.046 22 16 22C17.954 22 18.186 21.993 18.957 21.957C19.671 21.925 20.058 21.806 20.317 21.705C20.658 21.573 20.902 21.414 21.157 21.158C21.414 20.902 21.573 20.658 21.705 20.316C21.805 20.058 21.925 19.671 21.957 18.957C21.993 18.186 22 17.954 22 16C22 14.046 21.993 13.814 21.957 13.043C21.925 12.329 21.806 11.942 21.705 11.683C21.5876 11.3657 21.4007 11.0787 21.158 10.843C20.9219 10.5997 20.6341 10.4124 20.316 10.295C20.058 10.195 19.671 10.075 18.957 10.043C18.186 10.007 17.954 10 16 10ZM16 11.768C16.5558 11.768 17.1061 11.8775 17.6195 12.0901C18.133 12.3028 18.5995 12.6145 18.9925 13.0075C19.3855 13.4005 19.6972 13.867 19.9099 14.3805C20.1225 14.8939 20.232 15.4442 20.232 16C20.232 16.5558 20.1225 17.1061 19.9099 17.6195C19.6972 18.133 19.3855 18.5995 18.9925 18.9925C18.5995 19.3855 18.133 19.6972 17.6195 19.9099C17.1061 20.1225 16.5558 20.232 16 20.232C14.8776 20.232 13.8012 19.7861 13.0075 18.9925C12.2139 18.1988 11.768 17.1224 11.768 16C11.768 14.8776 12.2139 13.8012 13.0075 13.0075C13.8012 12.2139 14.8776 11.768 16 11.768ZM16 18.368C16.628 18.368 17.2303 18.1185 17.6744 17.6744C18.1185 17.2303 18.368 16.628 18.368 16C18.368 15.372 18.1185 14.7697 17.6744 14.3256C17.2303 13.8815 16.628 13.632 16 13.632C15.372 13.632 14.7697 13.8815 14.3256 14.3256C13.8815 14.7697 13.632 15.372 13.632 16C13.632 16.628 13.8815 17.2303 14.3256 17.6744C14.7697 18.1185 15.372 18.368 16 18.368ZM21.3 11.85C21.3 12.155 21.1788 12.4475 20.9632 12.6632C20.7475 12.8788 20.455 13 20.15 13C19.845 13 19.5525 12.8788 19.3368 12.6632C19.1212 12.4475 19 12.155 19 11.85C19 11.545 19.1212 11.2525 19.3368 11.0368C19.5525 10.8212 19.845 10.7 20.15 10.7C20.455 10.7 20.7475 10.8212 20.9632 11.0368C21.1788 11.2525 21.3 11.545 21.3 11.85Z" fill="black"></path>
+                        </svg>
+                      </div>
+                    </a></li>
+                  <li class="SocialIconsListItem-dembhR gQILrJ social-icons__list-item social-icons__list-item--tiktok social-icons__list-item--footer">
+                    <a aria-label="Follow us on TikTok" class="external-link SocialIconExternalLink-huuzOU vUgCi social-icons__link social-icons__link--tiktok" href="https://www.tiktok.com/@wired?lang=en" rel=" noopener" target="_blank">
+                      <div class="SocialIconContainer-huXzUC pMzVC social-icons__icon-container">
+                        <svg class="SocialIconNetworkIconComponent-cZaKGz dlOAhZ icon icon-tiktok" focusable="false" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Tiktok</title>
+                          <path d="M22.6895 14.4733C22.5587 14.486 22.4275 14.4927 22.2961 14.4933C20.8554 14.4935 19.5115 13.7672 18.7223 12.5618V19.1388C18.7223 21.8235 16.546 24 13.8612 24C11.1764 24 9 21.8236 9 19.1388C9 16.454 11.1764 14.2777 13.8612 14.2777C13.9626 14.2777 14.0619 14.2868 14.1616 14.293V16.6887C14.0619 16.6767 13.9638 16.6584 13.8612 16.6584C12.4909 16.6584 11.3802 17.7692 11.3802 19.1394C11.3802 20.5097 12.4909 21.6204 13.8612 21.6204C15.2317 21.6204 16.4419 20.5407 16.4419 19.1703L16.4659 8H18.7576C18.9737 10.0552 20.6308 11.6603 22.6918 11.811V14.4733" fill="black"></path>
+                        </svg>
+                      </div>
+                    </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="SiteFooterOneTrustButtonContainer-ZTHDi oYQsd">
+          <div class="OneTrustButtonIconWrapper-jBxCcL ipoisD oneTrust_button__icon-container">
+            <svg class="PrivacyOTIconWrapper-dcjjMU iiIxzr OneTrustButtonIcon-eQOPhc hbIkjC oneTrust_button-icon icon icon-privacyOT" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 14" width="32" height="9.5">
+              <g>
+                <g id="final---dec.11-2020_1_">
+                  <g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)">
+                    <g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)">
+                      <path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path>
+                    </g>
+                  </g>
+                </g>
+                <g id="final---dec.11-2020">
+                  <g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)">
+                    <g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)">
+                      <path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8
+                  h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path>
+                      <path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0
+                  l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8
+                  c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path>
+                      <path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0
+                  L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <button class="BaseButton-bLlsy ButtonWrapper-xCepQ fhIjxp fPCoEe button button--utility SiteFooterOneTrustButton-eGtcst gSbacT ot-sdk-show-settings ot-sdk-btn-show--cookies ot-sdk-btn--visible" data-event-click="{&quot;element&quot;:&quot;Button&quot;}" data-testid="Button" id="ot-sdk-btn" type="button">Do not sell my personal info</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal modal--hidden" id="my-modal" data-area="MOD">
+
+  <div class="modal__dialog">
+
+    <button class="btn btn--close modal__close-btn">
+
+      <i class="icon-cross"></i>
+
+    </button>
+
+    <div class="modal__content">
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="backdrop"></div>
+
+
+
+
+
+<span class="scroll-to-top">
+
+  <i class="icon-chevron-right"></i>
+
+</span>
+
+<link rel="stylesheet" href="https://www.wired.com/coupons/assets/packs/css/simple_2019_grid/83/index-2deb917a.css">
+
+<script src="https://www.wired.com/coupons/assets/packs/js/runtime-9ed962b4af8126a38a37.js"></script>
+<script src="https://www.wired.com/coupons/assets/packs/js/9606-f976f3853c66bcf3ffc1.js"></script>
+<script src="https://www.wired.com/coupons/assets/packs/js/3199-3e334fec4e3b74a3b6d6.js"></script>
+<script src="https://www.wired.com/coupons/assets/packs/js/8596-db4209aa8ed4ae1e5b63.js"></script>
+<script src="https://www.wired.com/coupons/assets/packs/js/simple_2019_grid/83/index-24758024294ff9ce9550.js"></script>
+<script src="https://www.wired.com/coupons/assets/packs/js/flat_2016/lazy-6750c5f292d84b79bf10.js"></script>
+
+
+
+<script>
+  if (window.location.pathname === '/coupons/apple') {
+      var classw, index;
+      classw = document.getElementsByClassName("widget--summary")
+      for (index = 0; index < classw.length; ++index) {
+          classw[index].setAttribute("style", "display: none;");
+      }
+  }
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="" charset="">(function(c,d){function g(){var b=d.getElementsByClassName("subscribe-container full-barrier"),a=d.getElementsByClassName("subscribe-container half-barrier");if(a[0]){if(0<a[0].offsetWidth&&0<a[0].offsetHeight)return c.dataLayer.push({event:"barrier-half"}),!0}else if(b[0]&&0<b[0].offsetWidth&&0<b[0].offsetHeight)return c.dataLayer.push({event:"barrier-full"}),!0;return!1}function e(a){clearTimeout(f);!g()&&0<a&&(f=setTimeout(function(){e(a-1)},500))}var f;if(d){e(20);var a=c.history,h=a.pushState;
+a.pushState=function(b){if("function"==typeof a.onpushstate)a.onpushstate({state:b});e(20);return h.apply(a,arguments)}}})(window,document);</script><div style="display: none; visibility: hidden;"><script>if("undefined"===typeof OnetrustActiveGroups){(function(){var a=document.createElement("script");a.setAttribute("src","https://cdn.cookielaw.org/scripttemplates/otSDKStub.js");a.setAttribute("type","text/javascript");a.setAttribute("charset","UTF-8");a.setAttribute("data-domain-script","93ddfe0c-4b21-4ad5-8191-612d2a67aad3");document.body.appendChild(a)})();var OptanonWrapper=function(){if(document){var a=document.getElementById("ot-sdk-btn");a&&a.classList.add("ot-sdk-btn--visible")}window.dataLayer.push({event:"OneTrustGroupsUpdated"});
+window.cnBus&&window.cnBus.emit&&window.cnBus.emit("onetrust.OneTrustGroupsUpdated")};(function(){var a=document.createElement("script");a.setAttribute("src","https://cdn.cookielaw.org/opt-out/otCCPAiab.js");a.setAttribute("type","text/javascript");a.setAttribute("charset","UTF-8");a.setAttribute("ccpa-opt-out-ids","C0002","C0003","C0004","C0005");a.setAttribute("ccpa-opt-out-geo","ca");a.setAttribute("ccpa-opt-out-lspa","false");document.body.appendChild(a)})()};</script></div><script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="93ddfe0c-4b21-4ad5-8191-612d2a67aad3"></script><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><script src="https://cdn.cookielaw.org/opt-out/otCCPAiab.js" type="text/javascript" charset="UTF-8" ccpa-opt-out-ids="C0002" ccpa-opt-out-geo="ca" ccpa-opt-out-lspa="false"></script><iframe style="display:none;height:0;opacity:0;visibility:hidden;border:0;width:0;height:0;" name="__uspapiLocator"></iframe></body></html>
