@@ -12,3 +12,5 @@ scrapy-user-agents
 scrapy-proxy-pool
 scrapy-selenium
 selenium
+webdriver-manager
+logging
