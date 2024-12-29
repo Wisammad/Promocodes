@@ -69,24 +69,54 @@ class StaticPromoScraper:
 
     def fetch_coupons(self):
         try:
-            available_codes = []  # List to store valid codes and their URLs
+            available_codes = []
             
             # Load initial page to get coupon IDs
             self.driver.get(self.base_url)
-            coupon_elements = self.driver.find_elements(By.CSS_SELECTOR, "div[data-coupon-id]")
-            coupon_ids = list({element.get_attribute("data-coupon-id") for element in coupon_elements})
+            time.sleep(2)  # Add small delay for page load
+            
+            # Get all coupon divs with their data attributes directly
+            coupon_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.coupon__logo[data-coupon-id][data-shop-name][data-coupon-title]")
+            coupon_data = []
+            
+            for element in coupon_elements:
+                coupon_id = element.get_attribute("data-coupon-id")
+                shop_name = element.get_attribute("data-shop-name")
+                coupon_title = element.get_attribute("data-coupon-title")
+                
+                if coupon_id and shop_name and coupon_title:
+                    coupon_data.append({
+                        "id": coupon_id,
+                        "shop_name": shop_name,
+                        "title": coupon_title
+                    })
+
+            # Remove duplicates while preserving order
+            seen_ids = set()
+            unique_coupons = []
+            for coupon in coupon_data:
+                if coupon["id"] not in seen_ids:
+                    seen_ids.add(coupon["id"])
+                    unique_coupons.append(coupon)
+
+            print(f"\nFound {len(unique_coupons)} unique coupons")
 
             # Print found IDs
-            print("\n=== FOUND COUPON IDs ===")
-            for idx, coupon_id in enumerate(coupon_ids, 1):
-                print(f"ID {idx}: {coupon_id}")
-            print(f"Total IDs found: {len(coupon_ids)}")
+            print("\n=== FOUND COUPONS ===")
+            for idx, coupon in enumerate(unique_coupons, 1):
+                print(f"ID {idx}: {coupon['id']}")
+                if coupon['shop_name']: print(f"Shop: {coupon['shop_name']}")
+                if coupon['title']: print(f"Title: {coupon['title']}")
+                print("------------------------")
+            print(f"Total coupons found: {len(unique_coupons)}")
             print("========================\n")
 
-            for idx, coupon_id in enumerate(coupon_ids, 1):
+            for idx, coupon in enumerate(unique_coupons, 1):
                 try:
-                    coupon_url = f"{self.base_url}#id-{coupon_id}"
-                    print(f"Trying ID {idx}/{len(coupon_ids)}: {coupon_id}")
+                    coupon_url = f"{self.base_url}#id-{coupon['id']}"
+                    print(f"Processing {idx}/{len(unique_coupons)}: {coupon['id']}")
+                    if coupon['shop_name']: print(f"Shop: {coupon['shop_name']}")
+                    if coupon['title']: print(f"Title: {coupon['title']}")
                     
                     self.driver.get(coupon_url)
                     self.driver.refresh()
@@ -95,26 +125,29 @@ class StaticPromoScraper:
                     
                     if modal_exists:
                         modal = self.driver.find_element(By.CSS_SELECTOR, 'div.modal[id="my-modal"][data-area="MOD"]')
-                        
-                        # Check for "code not required" case
                         no_code_elements = modal.find_elements(By.CSS_SELECTOR, 'span.modal-clickout__code--empty')
-                        if not no_code_elements:  # If it's a valid code
+                        
+                        if not no_code_elements:
                             code = modal.find_element(By.CLASS_NAME, "modal-clickout__code").text
                             available_codes.append({
                                 "code": code,
-                                "url": coupon_url
+                                "url": coupon_url,
+                                "shop_name": coupon['shop_name'],
+                                "title": coupon['title']
                             })
-                            print(f"✓ Found valid code for ID {coupon_id}")
+                            print(f"✓ Found valid code: {code}")
                         else:
-                            print(f"✗ No code required for ID {coupon_id}")
+                            print("✗ No code required")
 
                 except Exception as e:
-                    print(f"✗ Error processing ID {coupon_id}: {str(e)}")
+                    print(f"✗ Error processing coupon: {str(e)}")
                     continue
 
             # Print final results
             print("\n=== AVAILABLE PROMO CODES ===")
             for item in available_codes:
+                if item['shop_name']: print(f"Shop: {item['shop_name']}")
+                if item['title']: print(f"Title: {item['title']}")
                 print(f"Code: {item['code']}")
                 print(f"URL: {item['url']}")
                 print("----------------------------")
