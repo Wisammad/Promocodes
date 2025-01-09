@@ -14,3 +14,5 @@ scrapy-selenium
 selenium
 webdriver-manager
 logging
+fake_useragent
+retry
