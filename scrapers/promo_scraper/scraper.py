@@ -86,6 +86,10 @@ class RetailMeNotScraper:
             links = []
             for element in coupon_elements:
                 try:
+                    # Add this right after finding each container, before processing x-data
+                    if not element.find_elements(By.XPATH, ".//p[text()='Coupon code']"):
+                        continue
+                    
                     # Get both href and x-data attributes
                     href = element.get_attribute('href')
                     x_data = element.get_attribute('x-data')
@@ -196,6 +200,8 @@ class RetailMeNotScraper:
             logger.info("Starting coupon scrape")
             driver = self.setup_driver()
             
+
+            
             # Get coupon links
             coupon_links = self.find_coupon_links(driver)
             logger.info(f"Found {len(coupon_links)} coupon links")
@@ -234,6 +240,7 @@ class RetailMeNotScraper:
         finally:
             if driver:
                 driver.quit()
+
 
 def main():
     scraper = RetailMeNotScraper()
