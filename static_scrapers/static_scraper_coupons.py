@@ -113,11 +113,10 @@ class CouponsComScraper(StaticPromoScraper):
                             # Look for code in the modal
                             code = new_page.evaluate("""
                                 () => {
-                                    // Try multiple ways to find the code
                                     const codeSelectors = [
-                                        '.b8qpi79',  // Direct class for code
-                                        'div[role="dialog"] .az57m46',  // Code within dialog
-                                        'span[class*="b8qpi77"] h4'  // Code within span
+                                        '.b8qpi79',
+                                        'div[role="dialog"] .az57m46',
+                                        'span[class*="b8qpi77"] h4'
                                     ];
                                     
                                     for (const selector of codeSelectors) {
@@ -138,7 +137,7 @@ class CouponsComScraper(StaticPromoScraper):
                                     "title": voucher['title']
                                 })
                                 
-                                # Close modal using X button with correct selector
+                                # Close only the modal using X button
                                 close_button = new_page.query_selector('button.snc0wg0.snc0wg3.snc0wg5._1s1ejtn3')
                                 if close_button:
                                     logger.info("Found close button, clicking...")
@@ -146,7 +145,6 @@ class CouponsComScraper(StaticPromoScraper):
                                     time.sleep(2)
                                 else:
                                     logger.info("Close button not found with class selector")
-                                    # Try alternative selector
                                     close_button = new_page.query_selector('button[aria-label="close"]')
                                     if close_button:
                                         logger.info("Found close button with aria-label, clicking...")
@@ -155,12 +153,6 @@ class CouponsComScraper(StaticPromoScraper):
                             else:
                                 logger.info("No code found in modal")
                             
-                            # Close the new page
-                            new_page.close()
-                        else:
-                            logger.info("Not a coupons.com page, closing...")
-                            new_page.close()
-                        
                     except Exception as e:
                         logger.error(f"Error handling new page: {str(e)}")
                     
