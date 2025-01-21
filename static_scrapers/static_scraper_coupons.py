@@ -58,9 +58,7 @@ class CouponsComScraper(StaticPromoScraper):
             vouchers = self.page.evaluate("""
                 () => {
                     const results = [];
-                    // Find parent containers that have the _13wrug0 class
                     document.querySelectorAll('div[class*="_13wrug0"]').forEach(container => {
-                        // Get the associated data-attribute div
                         const dataDiv = container.previousElementSibling;
                         if (dataDiv && dataDiv.getAttribute('data-attribute') === 'code') {
                             const seeButton = container.querySelector('div[class*="_1fgcb8yu"]');
@@ -81,33 +79,90 @@ class CouponsComScraper(StaticPromoScraper):
             logger.info(f"Found {len(vouchers)} coupon vouchers with 'See coupon' buttons")
             
             # Process each coupon
-            for voucher in vouchers:
+            for idx, voucher in enumerate(vouchers):
                 try:
-                    logger.info(f"Processing coupon for {voucher['shopName']}: {voucher['title']}")
+                    logger.info(f"\nProcessing coupon for {voucher['shopName']}: {voucher['title']}")
                     
-                    # Click the button
-                    button = self.page.query_selector(voucher['buttonSelector'])
-                    if button:
-                        logger.info("Found See coupon button, clicking...")
-                        button.click()
+                    # Create context for handling new pages
+                    with self.context.expect_page() as new_page_info:
+                        # Click the button
+                        button = self.page.query_selector(voucher['buttonSelector'])
+                        if button:
+                            logger.info("Found See coupon button, clicking...")
+                            button.click()
+                    
+                    # Handle the new page that opens
+                    try:
+                        new_page = new_page_info.value
+                        # Wait for the new page to load
+                        new_page.wait_for_load_state('networkidle')
                         time.sleep(2)
                         
-                        # Try to find code in modal
-                        try:
-                            modal = self.page.wait_for_selector("div[role='dialog']", timeout=5000)
-                            if modal:
-                                code = modal.text_content("[data-testid='coupon-code']")
-                                if code:
-                                    available_codes.append({
-                                        "code": code.strip(),
-                                        "shop_name": voucher['shopName'],
-                                        "title": voucher['title']
-                                    })
-                                    logger.info(f"Found code: {code.strip()}")
-                        except Exception as e:
-                            logger.info(f"No modal found: {str(e)}")
-                    else:
-                        logger.info("Button not found")
+                        # Log URLs for debugging
+                        logger.info(f"New page URL: {new_page.url}")
+                        
+                        # If it's a coupons.com page, process it
+                        if "coupons.com" in new_page.url:
+                            logger.info("Found coupons.com page, saving HTML...")
+                            
+                            # Save HTML to file
+                            page_html = new_page.content()
+                            with open(f'debug_page_{idx}.html', 'w', encoding='utf-8') as f:
+                                f.write(page_html)
+                            
+                            # Look for code in the modal
+                            code = new_page.evaluate("""
+                                () => {
+                                    // Try multiple ways to find the code
+                                    const codeSelectors = [
+                                        '.b8qpi79',  // Direct class for code
+                                        'div[role="dialog"] .az57m46',  // Code within dialog
+                                        'span[class*="b8qpi77"] h4'  // Code within span
+                                    ];
+                                    
+                                    for (const selector of codeSelectors) {
+                                        const element = document.querySelector(selector);
+                                        if (element && element.textContent.trim()) {
+                                            return element.textContent.trim();
+                                        }
+                                    }
+                                    return null;
+                                }
+                            """)
+                            
+                            if code:
+                                logger.info(f"Found code: {code}")
+                                available_codes.append({
+                                    "code": code,
+                                    "shop_name": voucher['shopName'],
+                                    "title": voucher['title']
+                                })
+                                
+                                # Close modal using X button with correct selector
+                                close_button = new_page.query_selector('button.snc0wg0.snc0wg3.snc0wg5._1s1ejtn3')
+                                if close_button:
+                                    logger.info("Found close button, clicking...")
+                                    close_button.click()
+                                    time.sleep(2)
+                                else:
+                                    logger.info("Close button not found with class selector")
+                                    # Try alternative selector
+                                    close_button = new_page.query_selector('button[aria-label="close"]')
+                                    if close_button:
+                                        logger.info("Found close button with aria-label, clicking...")
+                                        close_button.click()
+                                        time.sleep(2)
+                            else:
+                                logger.info("No code found in modal")
+                            
+                            # Close the new page
+                            new_page.close()
+                        else:
+                            logger.info("Not a coupons.com page, closing...")
+                            new_page.close()
+                        
+                    except Exception as e:
+                        logger.error(f"Error handling new page: {str(e)}")
                     
                 except Exception as e:
                     logger.error(f"Error processing voucher: {str(e)}")
