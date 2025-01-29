@@ -75,21 +75,40 @@ class StaticPromoScraper:
             self.driver.get(self.base_url)
             time.sleep(2)  # Add small delay for page load
             
-            # Get all coupon divs with their data attributes directly
-            coupon_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.coupon__logo[data-coupon-id][data-shop-name][data-coupon-title]")
+            # Get all coupon divs with class 'coupon' and check their type
+            coupon_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.coupon[data-coupon-type]")
             coupon_data = []
             
             for element in coupon_elements:
-                coupon_id = element.get_attribute("data-coupon-id")
-                shop_name = element.get_attribute("data-shop-name")
-                coupon_title = element.get_attribute("data-coupon-title")
+                coupon_type = element.get_attribute("data-coupon-type")
                 
-                if coupon_id and shop_name and coupon_title:
-                    coupon_data.append({
-                        "id": coupon_id,
-                        "shop_name": shop_name,
-                        "title": coupon_title
-                    })
+                # Only process if it's a coupon, skip offers
+                if coupon_type and coupon_type.lower() == "coupon":
+                    # Find the logo div within this coupon element which contains the data attributes
+                    logo_div = element.find_element(By.CSS_SELECTOR, "div.coupon__logo")
+                    
+                    coupon_id = logo_div.get_attribute("data-coupon-id")
+                    shop_name = logo_div.get_attribute("data-shop-name")
+                    coupon_title = logo_div.get_attribute("data-coupon-title")
+                    
+                    # Check if this is a coupon with a code by looking for the code label
+                    has_code = len(element.find_elements(By.CSS_SELECTOR, "span.coupon__label-code")) > 0
+                    
+                    if coupon_id and shop_name and coupon_title and has_code:
+                        # Get verification date if available
+                        verified_element = element.find_elements(By.CSS_SELECTOR, "span.coupon__verified")
+                        verified_date = verified_element[0].text.replace("Verified on ", "") if verified_element else None
+                        
+                        coupon_data.append({
+                            "id": coupon_id,
+                            "shop_name": shop_name,
+                            "title": coupon_title,
+                            "type": coupon_type,
+                            "verified_date": verified_date
+                        })
+                        logger.info(f"Found coupon: {shop_name} - {coupon_title}")
+                else:
+                    logger.debug(f"Skipping offer type for element {element.get_attribute('data-coupon-id')}")
 
             # Remove duplicates while preserving order
             seen_ids = set()
