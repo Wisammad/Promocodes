@@ -1,5 +1,5 @@
 from static_scrapers.static_scraper import StaticPromoScraper
-from scrapers.promo_scraper.scraper import RetailMeNotScraper
+from scrapers.scraper import RetailMeNotScraper
 from models import PromoCode, MerchantRevenue
 from database import db
 from app import app
