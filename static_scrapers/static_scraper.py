@@ -67,6 +67,29 @@ class StaticPromoScraper:
         except Exception as e:
             logger.error(f"Failed to save page source: {str(e)}")
 
+    def is_valid_code(self, code):
+        """
+        Validate if the promo code format is correct.
+        Returns False if code contains spaces or multiple words.
+        """
+        if not code:
+            return False
+        
+        # Remove any leading/trailing whitespace
+        code = code.strip()
+        
+        # Check for spaces or multiple words
+        if ' ' in code in code or len(code.split()) > 1:
+            logger.debug(f"Invalid code format (contains spaces or multiple words): {code}")
+            return False
+        
+        # Check if it's a signup message
+        if code.lower().startswith(('sent', 'code sent')):
+            logger.debug(f"Invalid code (signup required): {code}")
+            return False
+        
+        return True
+
     def fetch_coupons(self):
         try:
             available_codes = []
@@ -148,13 +171,18 @@ class StaticPromoScraper:
                         
                         if not no_code_elements:
                             code = modal.find_element(By.CLASS_NAME, "modal-clickout__code").text
-                            available_codes.append({
-                                "code": code,
-                                "url": coupon_url,
-                                "shop_name": coupon['shop_name'],
-                                "title": coupon['title']
-                            })
-                            print(f"✓ Found valid code: {code}")
+                            
+                            # Only add the coupon if the code is valid
+                            if self.is_valid_code(code):
+                                available_codes.append({
+                                    "code": code,
+                                    "url": coupon_url,
+                                    "shop_name": coupon['shop_name'],
+                                    "title": coupon['title']
+                                })
+                                print(f"✓ Found valid code: {code}")
+                            else:
+                                print(f"✗ Invalid code format: {code}")
                         else:
                             print("✗ No code required")
 
@@ -170,7 +198,7 @@ class StaticPromoScraper:
                 print(f"Code: {item['code']}")
                 print(f"URL: {item['url']}")
                 print("----------------------------")
-            print(f"Total codes found: {len(available_codes)}")
+            print(f"Total valid codes found: {len(available_codes)}")
             print("============================\n")
 
             return available_codes

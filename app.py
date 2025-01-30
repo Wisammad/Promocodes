@@ -1,5 +1,6 @@
 from flask import Flask
-from database import init_db
+from flask_migrate import Migrate
+from database import db
 from routes.promo_code_routes import promo_bp
 from routes.user_profile_routes import user_profile_bp
 from routes.usage_log_routes import usage_log_bp
@@ -14,7 +15,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize database
-init_db(app)
+db.init_app(app)
+
+# Initialize Flask-Migrate
+migrate = Migrate(app, db)
 
 # Register blueprints
 app.register_blueprint(promo_bp, url_prefix='/api')

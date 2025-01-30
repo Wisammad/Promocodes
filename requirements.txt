@@ -16,3 +16,4 @@ webdriver-manager
 logging
 fake_useragent
 retry
+playwright

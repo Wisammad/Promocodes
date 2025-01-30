@@ -89,7 +89,7 @@ class RetailMeNotScraper:
                 lambda d: d.execute_script("return document.readyState") == "complete"
             )
             logger.info("Page fully loaded.")
-                        
+                    
             # Wait for at least one offer to appear
             try:
                 WebDriverWait(driver, 10).until(
@@ -132,7 +132,7 @@ class RetailMeNotScraper:
                         driver.execute_script("arguments[0].click();", show_more)
                     
                     logger.info("Clicked 'Show More' button. Waiting for new offers...")
-                    time.sleep(0.5) #change this if you want to wait longer for the next 'show more' button to be clicked
+                    time.sleep(0.5)
                     
                     # Check if new offers have loaded
                     current_offers = len(
@@ -144,6 +144,7 @@ class RetailMeNotScraper:
                     if current_offers <= initial_offers:
                         logger.info("No new offers loaded, stopping.")
                         break
+                        
                     initial_offers = current_offers
                     
                 except TimeoutException:
@@ -296,14 +297,9 @@ class RetailMeNotScraper:
             return None
 
     @retry(TimeoutException, tries=3, delay=2, backoff=2)
-    def scrape_coupons(self) -> Dict[str, Coupon]:
+    def scrape_coupons(self) -> List[Coupon]:
         """
-        Main scraping workflow:
-        1. Set up the driver.
-        2. Load all offers recursively.
-        3. Find coupon links (Coupon code only).
-        4. Extract coupon details for each link.
-        5. Return dictionary of results.
+        Main scraping workflow that returns a list of unique coupons
         """
         driver = None
         try:
@@ -311,34 +307,40 @@ class RetailMeNotScraper:
             driver = self.setup_driver()
             
             # Ensure all offers are loaded
-            self.load_all_offers(driver)
+            if not self.load_all_offers(driver):
+                logger.error("Failed to load all offers")
+                return []
             
             # Gather all coupon links
             coupon_links = self.find_coupon_links(driver)
             logger.info(f"Found {len(coupon_links)} coupon links labeled 'Coupon code'")
             
-            results = {}
-            processed_urls = set()
+            results = []
+            processed_codes = set()
             
             # Visit each coupon link and extract data
             for link in coupon_links:
-                if link in processed_urls:
-                    logger.info(f"Skipping duplicate link: {link}")
+                try:
+                    driver.get(link)
+                    time.sleep(random.uniform(2, 4))
+                    
+                    coupon = self.extract_code_from_page(driver, link)
+                    if coupon and coupon.code:  # Only process coupons with actual codes
+                        code = coupon.code.strip().upper()
+                        if code and code not in processed_codes:
+                            processed_codes.add(code)
+                            results.append(coupon)
+                            logger.info(f"Added new coupon: {code}")
+                except Exception as e:
+                    logger.error(f"Error processing link {link}: {str(e)}")
                     continue
-                
-                processed_urls.add(link)
-                driver.get(link)
-                time.sleep(random.uniform(2, 4))  # Slight pause between page loads
-                
-                coupon = self.extract_code_from_page(driver, link)
-                if coupon:
-                    results[link] = coupon
             
+            logger.info(f"Successfully scraped {len(results)} unique coupons")
             return results
             
         except Exception as e:
             logger.error(f"Scraping failed: {str(e)}")
-            return {}
+            return []
         finally:
             if driver:
                 driver.quit()
@@ -348,8 +350,8 @@ def main():
     results = scraper.scrape_coupons()
     
     logger.info("Scraping completed. Results:")
-    for link, coupon in results.items():
-        print(f"Link: {link}")
+    for coupon in results:
+        print(f"Link: {coupon.url}")
         print(f"Code: {coupon.code}")
         print(f"Expiration Date: {coupon.expiration_date}")
         print(f"Discount Value: {coupon.discount_value}")
