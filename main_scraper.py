@@ -238,9 +238,9 @@ def main():
             logger.info(f"Found {len(retailmenot_coupons)} RetailMeNot coupons")
             
             # Run Wired scraper
-            '''wired_scraper = StaticPromoScraper("https://www.wired.com/coupons")
+            wired_scraper = StaticPromoScraper("https://www.wired.com/coupons")
             wired_coupons = wired_scraper.fetch_all_coupons()
-            logger.info(f"Found {len(wired_coupons)} Wired coupons")'''
+            logger.info(f"Found {len(wired_coupons)} Wired coupons")
             
             # Track statistics
             total_processed = 0
@@ -257,12 +257,12 @@ def main():
                     total_duplicates += 1
             
             # Process Wired coupons
-            '''for coupon in wired_coupons:
+            for coupon in wired_coupons:
                 total_processed += 1
                 if insert_promo_code(coupon, 'Wired'):
                     total_inserted += 1
                 else:
-                    total_duplicates += 1'''
+                    total_duplicates += 1
                     
             logger.info(f"""
             Scraping Summary:
