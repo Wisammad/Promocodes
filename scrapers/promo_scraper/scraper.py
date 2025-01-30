@@ -333,7 +333,6 @@ class RetailMeNotScraper:
                 coupon = self.extract_code_from_page(driver, link)
                 if coupon:
                     results[link] = coupon
-                    logger.info(f"Recorded coupon: {coupon}")
             
             return results
             
